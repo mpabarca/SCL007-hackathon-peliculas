@@ -9,11 +9,6 @@ fetch("llamada-data")
 })
 */
 
-/* SE LLAMA A BOOTSTRAP
-document.addEventListener('DOMContentLoaded', function(){
-  window.M.AutoInit(); 
-});
-*/
 
 /* INICIO DE TODO EL DOM
 window.onload =() =>{

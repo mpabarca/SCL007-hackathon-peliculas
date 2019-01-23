@@ -10,6 +10,7 @@
     "test": "mocha"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "chai": "^4.2.0",
     "eslint": "^5.9.0",
     "eslint-plugin-jest": "^22.1.2",

@@ -4,11 +4,11 @@
 
 window.functions ={
     getMovies(searchText){
-        axios.get('http://www.omdbapi.com/?apikey=8f262e4a&s='+searchText)
+        axios.get('http://www.omdbapi.com/?apikey=8f262e4a&t='+searchText+'&plot=full')
         .then((response)=>{
             console.log(response);
           let movies = response.data.Search;
-          console.log('movies array? '+ Object.values(movies));
+
           let moviesFound = '';
         //   return movies;
         $.each(movies, (index,movie) => {

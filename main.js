@@ -9,11 +9,6 @@ fetch("llamada-data")
 })
 */
 
-/* SE LLAMA A BOOTSTRAP
-document.addEventListener('DOMContentLoaded', function(){
-  window.M.AutoInit(); 
-});
-*/
 
 // INICIO DE TODO EL DOM
 window.onload =() =>{
@@ -26,7 +21,6 @@ document.getElementById('search-form').addEventListener('submit',(event) => {
   let movies = window.functions.getMovies(searchText);
   let showMovies = '';
   moviesFound = '';
-  console.log('en DOM' + movies);
   // movies.forEach(element => {
   //   console.log('movie solo' + movie);
   //   moviesFound.innerHTML += `

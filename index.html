@@ -1,50 +1,56 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8" lang="en">
-    <title></title>    
-    <!-- enlace bootstrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    <!-- responsive mobile-first -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://bootswatch.com/4/slate/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <!-- MENU NAVEGADOR -->
-        <nav clas = "navbar navbar-default">
+    <head>
+        <meta charset="utf-8" lang="en">
+        <title></title>    
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!-- enlace materialize -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <!-- responsive mobile-first -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <!-- enlace hoja css -->
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <!-- MENU NAVEGADOR -->
+            <nav clas = "navbar navbar-default">
+                <div class="container">
+                    <div class="navbar-header">
+                        <a href="index.html" class="navbar-brand">Información de la Película</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <!-- CONTENIDO BASE -->
             <div class="container">
-                <div class="navbar-header">
-                    <a href="index.html" class="navbar-brand">Información de la Película</a>
+                <div class="jumbotrom">
+                    <h3 class="text-center">Buscar una Película</h3>
+                    <form id="search-form">
+                        <input type="text" class="form-control" id="search-text" placeholder="Buscar Película">
+                    </form>
                 </div>
             </div>
-        </nav>
-    </header>
 
-    <main>
-        <!-- CONTENIDO BASE -->
-        <div class="container">
-            <div class="jumbotrom">
-                <h3 class="text-center">Buscar una Película</h3>
-                <form id="search-form">
-                    <input type="text" class="form-control" id="search-text" placeholder="Buscar Película">
-                </form>
+            <div id="root" class="container">
+                <div id="show-movies" class="row"></div>
             </div>
-        </div>
-
-        <div id="root" class="container">
-            <div id="show-movies" class="row"></div>
-        </div>
-        
-        
-
+            
+            
+            
+        </main>   
+        <footer>
+            <!-- PIE DE PÁGINA -->
+        </footer> 
         <div>
             <!-- SCRIPT DE FRAMEWORKS-->
-            <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+            <!-- jQuery first, then Materialize JS -->
             <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+            <!-- Calling data -->
             <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
         </div>
 
@@ -54,10 +60,5 @@
             <script src="movies.js"></script>
             <script></script>
         </div>
-    </main>
-
-    <footer>
-        <!-- PIE DE PÁGINA -->
-    </footer>
-</body>
+    </body>
 </html>

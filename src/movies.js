@@ -1,3 +1,11 @@
+/*let datajson;
+fetch("data/lol/lol.json")
+ .then(data=>data.json())
+ .then(data=>{
+   datajson=Object.values(data.data);
+   
+ })
+*/
 //AQUI SE AGREGAN TODAS LAS FUNCIONES A USAR EN DOM
 
 /*ESTRUCTURA BASE DE LA FUNCION
@@ -12,7 +20,8 @@
 
 window.functions ={
     getMovies(searchText){
-        axios.get('http://www.omdbapi.com/?apikey=8f262e4a&s='+searchText)
+        //obtención data
+        return axios.get('http://www.omdbapi.com/?apikey=8f262e4a&s='+searchText)
         .then((response)=>{
           let movies = response.data.Search;
           let moviesFound = '';

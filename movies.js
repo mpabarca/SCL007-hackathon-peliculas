@@ -1,9 +1,18 @@
 //AQUI SE AGREGAN TODAS LAS FUNCIONES A USAR EN DOM
 
-//ESTRUCTURA BASE DE LA FUNCION
+/*ESTRUCTURA BASE DE LA FUNCION
+ nombreFuncion: (parametros) => {
+
+         return resultadoFuncion;
+     },
+     nombreFuncion2: (parametros) => {
+
+         return resultadoFuncion2;
+     } */
 
 window.functions ={
     getMovies(searchText){
+        //obtención data
         axios.get('http://www.omdbapi.com/?apikey=8f262e4a&s='+searchText)
         .then((response)=>{
             console.log(response);
@@ -31,13 +40,6 @@ window.functions ={
     }
   
   
-    // nombreFuncion: (parametros) => {
-
-    //     return resultadoFuncion;
-    // },
-    // nombreFuncion2: (parametros) => {
-
-    //     return resultadoFuncion2;
-    // }
+    
 }
 

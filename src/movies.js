@@ -15,7 +15,7 @@ window.functions ={
             console.log('movie solo' + movie);
             moviesFound += `
             <div class="col-md-3">
-                <div class="well text-center>
+                <div class="well text-center">
                     <img src="${movie.Poster}">
                     <h5>${movie.Title}</h5>
                     <a onclick="movieSelected('${movie.imdbID}')" class="btn btn-primary" href="#">Detalles</a>
@@ -29,7 +29,6 @@ window.functions ={
           console.log(err);
         }); 
     }
-  
   
   
     // nombreFuncion: (parametros) => {

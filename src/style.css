@@ -1,0 +1,16 @@
+.card-image{
+    height: 250px;
+    overflow: hidden;
+}
+#image{
+    height: 200px;
+}
+#card-horizontal{
+    height: 250px;
+}
+h5{
+    font-size: 20px;
+}
+#more-detail{
+    float: right;
+}

@@ -2,9 +2,10 @@
 <html>
     <head>
         <meta charset="utf-8" lang="en">
-        <title>Que Veo</title>    
-        <!--Import Google Icon Font-->
+        <title>Que Veo</title>      
+        <!--Import Icon Font-->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
         <!-- enlace materialize -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
         <!-- responsive mobile-first -->
@@ -43,101 +44,99 @@
         <!--PAGINA 2-->
         <!-- Carrusel-->
         <div class="container" id="carousel">
-            <div class="carousel">
-                <a class="carousel-item" href="#one!"><img src="https://m.media-amazon.com/images/M/MV5BMjA1Nzk0OTM2OF5BMl5BanBnXkFtZTgwNjU2NjEwMDE@._V1_SX300.jpg" alt="imagen de pelicula"></a>
-                <a class="carousel-item" href="#two!"><img src="https://m.media-amazon.com/images/M/MV5BMjMxNjY2MDU1OV5BMl5BanBnXkFtZTgwNzY1MTUwNTM@._V1_SX300.jpg" alt="imagen de pelicula"></a>
-                <a class="carousel-item" href="#three!"><img src="https://m.media-amazon.com/images/M/MV5BNTc4MTc3NTQ5OF5BMl5BanBnXkFtZTcwOTg0NjI4NA@@._V1_SX300.jpg" alt="imagen de pelicula"></a>
-                <a class="carousel-item" href="#four!"><img src="https://m.media-amazon.com/images/M/MV5BMTYyNzEyNDAzOV5BMl5BanBnXkFtZTgwNTk3NDczNjM@._V1_SX300.jpg" alt="imagen de pelicula"></a>
-                <a class="carousel-item" href="#five!"><img src="https://m.media-amazon.com/images/M/MV5BMTY1OTA2MjI5OV5BMl5BanBnXkFtZTgwNzkxMjU4NjM@._V1_SX300.jpg" alt="imagen de pelicula"></a>
+            <div class="carousel col s12 m12 l10">
+                <a class="carousel-item" href="#one!"><img src="https://m.media-amazon.com/images/M/MV5BMjA1Nzk0OTM2OF5BMl5BanBnXkFtZTgwNjU2NjEwMDE@._V1_SX300.jpg"></a>
+                <a class="carousel-item" href="#two!"><img src="https://m.media-amazon.com/images/M/MV5BMjMxNjY2MDU1OV5BMl5BanBnXkFtZTgwNzY1MTUwNTM@._V1_SX300.jpg"></a>
+                <a class="carousel-item" href="#three!"><img src="https://m.media-amazon.com/images/M/MV5BNTc4MTc3NTQ5OF5BMl5BanBnXkFtZTcwOTg0NjI4NA@@._V1_SX300.jpg"></a>
+                <a class="carousel-item" href="#four!"><img src="https://m.media-amazon.com/images/M/MV5BMTYyNzEyNDAzOV5BMl5BanBnXkFtZTgwNTk3NDczNjM@._V1_SX300.jpg"></a>
+                <a class="carousel-item" href="#five!"><img src="https://m.media-amazon.com/images/M/MV5BMTY1OTA2MjI5OV5BMl5BanBnXkFtZTgwNzkxMjU4NjM@._V1_SX300.jpg"></a>
             </div>
+            <br><br>
             <div class="row" id="list-movies">
-                <div class="col s12 m7" id="one!">
-                    <h2 class="header">Her</h2>
-                    <div class="card horizontal">
+                <div class="col s12 m6 l4" id="one!">
+                <div class="card horizontal" id="card-horizontal">
                         <div class="card-image">
-                        <img src="https://m.media-amazon.com/images/M/MV5BMjA1Nzk0OTM2OF5BMl5BanBnXkFtZTgwNjU2NjEwMDE@._V1_SX300.jpg" alt="imagen de pelicula">
+                            <img id="image" src="https://m.media-amazon.com/images/M/MV5BMjA1Nzk0OTM2OF5BMl5BanBnXkFtZTgwNjU2NjEwMDE@._V1_SX300.jpg">
                         </div>
                         <div class="card-stacked">
-                        <div class="card-content">
-                            <p>I am a very simple card. I am good at containing small bits of information.</p>
-                            <span id="tt1798709">8.0</span>
-                        </div>
-                        <div class="card-action">
-                            <a class="waves-effect waves-light btn modal-trigger" onclick="getMovieById('tt1798709 ')" href="#modal1">Detalles</a>
-                        </div>
+                            <div class="card-content">
+                                <h5 class="header">Her</h5>
+                                <span id="tt1798709">8.0</span>
+                            </div>
+                            <div class="card-action">
+                                <a id="more-detail" class="btn-floating btn-large waves-effect waves-light red btn-small"  onclick="getMovieById('tt1798709 ')" href="#modal1"><i class="material-icons">add</i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col s12 m7" id="two!">
-                    <h2 class="header">Avengers: Infinity War</h2>
-                    <div class="card horizontal">
+                <div class="col s12 m6 l4" id="two!">
+                    <div class="card horizontal" id="card-horizontal">
                         <div class="card-image">
-                        <img src="https://m.media-amazon.com/images/M/MV5BMjMxNjY2MDU1OV5BMl5BanBnXkFtZTgwNzY1MTUwNTM@._V1_SX300.jpg" alt="imagen de pelicula">
+                            <img id="image" src="https://m.media-amazon.com/images/M/MV5BMjMxNjY2MDU1OV5BMl5BanBnXkFtZTgwNzY1MTUwNTM@._V1_SX300.jpg">
                         </div>
                         <div class="card-stacked">
-                        <div class="card-content">
-                            <p>I am a very simple card. I am good at containing small bits of information.</p>
-                            <span id="tt4154756">8.5</span>
-                        </div>
-                        <div class="card-action">
-                            <a class="waves-effect waves-light btn modal-trigger" onclick="getMovieById('tt4154756 ')" href="#modal1">Detalles</a>
-                        </div>
+                            <div class="card-content">
+                                <h5 class="header">Avengers: Infinity War</h5>
+                                <span id="tt4154756">8.5</span>
+                            </div>
+                            <div class="card-action">
+                                <a id="more-detail" class="btn-floating btn-large waves-effect waves-light red btn-small"  onclick="getMovieById('tt4154756 ')" href="#modal1"><i class="material-icons">add</i></a>
+                                <div class="heart"><a id="like" class="btn-floating btn-large waves-effect waves-light red btn-small"><i class="far fa-heart"></i></a></div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col s12 m7" id="three!">
-                    <h2 class="header">Star Wars: Episode III - Revenge of the Sith</h2>
-                    <div class="card horizontal">
+                <div class="col s12 m6 l4" id="three!">
+                    <div class="card horizontal" id="card-horizontal">
                         <div class="card-image">
-                        <img src="https://m.media-amazon.com/images/M/MV5BNTc4MTc3NTQ5OF5BMl5BanBnXkFtZTcwOTg0NjI4NA@@._V1_SX300.jpg" alt="imagen de pelicula">
+                          <img id="image" src="https://m.media-amazon.com/images/M/MV5BNTc4MTc3NTQ5OF5BMl5BanBnXkFtZTcwOTg0NjI4NA@@._V1_SX300.jpg">
                         </div>
                         <div class="card-stacked">
                         <div class="card-content">
-                            <p>I am a very simple card. I am good at containing small bits of information.</p>
+                            <h5 class="header">Star Wars: Episode III - Revenge of the Sith</h5>
                             <span id="tt0121766">7.6</span>
                         </div>
                         <div class="card-action">
-                            <a class="waves-effect waves-light btn modal-trigger" onclick="getMovieById('tt0121766 ')" href="#modal1">Detalles</a>
+                            <a id="more-detail" class="btn-floating btn-large waves-effect waves-light red btn-small"  onclick="getMovieById('tt0121766 ')" href="#modal1"><i class="material-icons">add</i></a>
+                            <div class="heart"><a id="like" class="btn-floating btn-large waves-effect waves-light red btn-small"><i class="far fa-heart"></i></a></div>
                         </div>
                         </div>
                     </div>
                 </div>
-                <div class="col s12 m7" id="four!">
-                    <h2 class="header">Ralph Breaks the Internet</h2>
-                    <div class="card horizontal">
+                <div class="col s12 m6 l4" id="four!">
+                    <div class="card horizontal" id="card-horizontal">
                         <div class="card-image">
-                        <img src="https://m.media-amazon.com/images/M/MV5BMTYyNzEyNDAzOV5BMl5BanBnXkFtZTgwNTk3NDczNjM@._V1_SX300.jpg" alt="imagen de pelicula">
+                          <img id="image" src="https://m.media-amazon.com/images/M/MV5BMTYyNzEyNDAzOV5BMl5BanBnXkFtZTgwNTk3NDczNjM@._V1_SX300.jpg">
                         </div>
                         <div class="card-stacked">
                         <div class="card-content">
-                            <p>I am a very simple card. I am good at containing small bits of information.</p>
+                            <h5 class="header">Ralph Breaks the Internet</h5>
                             <span id="tt5848272">7.3</span>
                         </div>
                         <div class="card-action">
-                            <a class="waves-effect waves-light btn modal-trigger" onclick="getMovieById('tt5848272 ')" href="#modal1">Detalles</a>
+                            <a id="more-detail" class="btn-floating btn-large waves-effect waves-light red btn-small"  onclick="getMovieById('tt5848272 ')" href="#modal1"><i class="material-icons">add</i></a>
+                            <div class="heart"><a id="like" class="btn-floating btn-large waves-effect waves-light red btn-small"><i class="far fa-heart"></i></a></div>
                         </div>
                         </div>
                     </div>
                 </div>
-                <div class="col s12 m7" id="five!">
-                    <h2 class="header">Glass</h2>
-                    <div class="card horizontal">
+                <div class="col s12 m6 l4" id="five!">
+                    <div class="card horizontal" id="card-horizontal">
                         <div class="card-image">
-                        <img src="https://m.media-amazon.com/images/M/MV5BMTY1OTA2MjI5OV5BMl5BanBnXkFtZTgwNzkxMjU4NjM@._V1_SX300.jpg" alt="imagen de pelicula">
+                          <img id="image" src="https://m.media-amazon.com/images/M/MV5BMTY1OTA2MjI5OV5BMl5BanBnXkFtZTgwNzkxMjU4NjM@._V1_SX300.jpg">
                         </div>
                         <div class="card-stacked">
                         <div class="card-content">
-                            <p>I am a very simple card. I am good at containing small bits of information.</p>
+                            <h5 class="header">Glass</h5>
                             <span id="tt6823368">7.3</span>
                         </div>
                         <div class="card-action">
-                            <a class="waves-effect waves-light btn modal-trigger" onclick="getMovieById('tt6823368 ')" href="#modal1">Detalles</a>
+                            <a id="more-detail" class="btn-floating btn-large waves-effect waves-light red btn-small"  onclick="getMovieById('tt6823368 ')" href="#modal1"><i class="material-icons">add</i></a>
+                            <div class="heart"><a id="like" class="btn-floating btn-large waves-effect waves-light red btn-small"><i class="far fa-heart"></i></a></div>
                         </div>
                         </div>
                     </div>
                 </div>
-                
-
             </div>
         </div>
 

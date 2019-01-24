@@ -10,12 +10,12 @@ M.AutoInit();
     axios.get('http://www.omdbapi.com/?apikey=8f262e4a&s='+searchText)
     .then((response)=>{
       let movies =response.data.Search;
-      let moviesFound = '';
+      
     $.each(movies, (index,movie) => {
       console.log(movie);
       let idMovie = movie.imdbID;
       console.log(idMovie);
-        moviesFound += `
+      document.getElementById('show-movies').innerHTML += `
         <div class="col s12 m7">
           <h2 class="header">${movie.Title}</h2>
           <div class="card horizontal">
@@ -36,7 +36,6 @@ M.AutoInit();
         `
         getRating(idMovie);
         });
-        $('#show-movies').html(moviesFound);
     })
     .catch((err) => {
       console.log(err);
@@ -49,7 +48,7 @@ M.AutoInit();
     .then((response)=>{
         console.log(response);
         let movie = response.data;
-        let infoMovie = ` 
+        document.getElementById('modal1').innerHTML = ` 
             <div class="modal-content">
                 
             <h4>${movie.Title}</h4>
@@ -66,10 +65,7 @@ M.AutoInit();
             <div class="modal-footer">
             <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
             </div>
-        ` ;
-        console.log('llega acá?');
-        $('#modal1').html(infoMovie);
-        
+        ` ;        
     })
     .catch((err) => {
       console.log(err);
@@ -80,17 +76,34 @@ M.AutoInit();
   function getRating(id){
     axios.get('http://www.omdbapi.com/?apikey=8f262e4a&i='+id+'&plot=full')
     .then((response) => {
-        $('#'+id).html(response.data.imdbRating);
+      // let rating = response.data.imdbRating;
+      // document.getElementById(id).innerHTML = rating;
+      $('#'+id).html(response.data.imdbRating);
     })
     .catch((err) => {
         console.log(err);
     }); 
   }
 
+  function register(){
+    document.getElementById('modal1').innerHTML = ` 
+    <div class="modal-content center-align">
+        
+    <h4>¡Estamos trabajando para usted!<i class="material-icons">
+    sentiment_satisfied_alt
+    </i></h4>
+    <div class="modal-footer">
+    <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cerrar</a>
+    </div>
+    ` ;
+  }
+
   function login(user,pass){
+    console.log('Holi '+user);
+      // if (passw === 'profe'){
 
   }
-  
+
   //BUSQUEDA POR NOMBRE  
   
   document.getElementById('search-form').addEventListener('submit',(event) => {
@@ -102,6 +115,8 @@ M.AutoInit();
   //LOGIN
   document.getElementById('login-access').addEventListener('click',(event) => {
     event.preventDefault();
+    let user = '';
+    let pass = '';
     document.getElementById('show-movies').style.display="none";
     document.getElementById('list-movies').style.display="none";
     document.getElementById('carousel').style.display="none";
@@ -113,23 +128,27 @@ M.AutoInit();
         <div class="row">
           <div class="input-field col s12">
             <i class="material-icons prefix">account_circle</i>
-            <input id="icon_prefix" type="text" class="validate">
-            <label for="icon_prefix">Usuario</label>
+            <input type="text" class="validate">
+            <label id="userIdentify" for="icon_prefix">Usuario</label>
           </div>
           <div class="input-field col s12">
             <i class="material-icons prefix">lock</i>
             <input id="password" type="password" class="validate">
-          <label for="password">Constraseña</label>
+            <label id="enterPass" for="password">Constraseña</label>
           </div>
-          <a class="waves-effect waves-light btn">Iniciar sesión</a>
+          <a onclick="login(`+ user +` , `+ pass +`)" class="waves-effect waves-light btn">Iniciar sesión</a>
+          <h6>¿Aún no tienes una cuenta?</h6>
+          <a class = "modal-trigger" onclick="register()" href="#modal1">Registate acá</a>
         </div>
-
       </form>
-    
-            
-    
     `;
+    user =  document.getElementById('userIdentify').innerHTML;
+    pass = document.getElementById('enterPass').innerHTML;
+    console.log('llega acá?' + user);
   });
+
+  
+  
 
   //BUSQUEDA POR GENERO
   

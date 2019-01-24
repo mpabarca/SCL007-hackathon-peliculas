@@ -1,16 +1,29 @@
-.card-image{
-    height: 250px;
-    overflow: hidden;
+.card-image {
+  height: 250px;
+  overflow: hidden;
 }
-#image{
-    height: 200px;
+
+#image {
+  height: 200px;
 }
-#card-horizontal{
-    height: 250px;
+
+#card-horizontal {
+  height: 250px;
 }
-h5{
-    font-size: 20px;
+
+h5 {
+  font-size: 20px;
 }
-#more-detail{
-    float: right;
+
+#more-detail {
+  float: right;
+}
+
+.small-logo {
+  height: 50px;
+  margin: 5px;
+}
+
+.nav-wrapper {
+  background-color: #E6B91E;
 }

@@ -1,22 +1,12 @@
 //MANEJO DE DOM
 
-/*  FETCH
-let datajson;
-fetch("llamada-data")
- .then(data=>data.json())
- .then(data=>{
-   datajson=Object.values(data.data);
-})
-*/
 M.AutoInit();
-
-// INICIO DE TODO EL DOM
-// window.onload =() =>{
 
   //FUNCIONES
   
   /* Función que filtra toda la data respecto a un nombre y las muestra */
   function getMoviesByName(searchText){
+    document.getElementById("carousel").style.display="none";
     axios.get('http://www.omdbapi.com/?apikey=8f262e4a&s='+searchText)
     .then((response)=>{
       let movies =response.data.Search;
@@ -137,4 +127,3 @@ M.AutoInit();
 
   //BUSQUEDA POR GENERO
   
-  // };

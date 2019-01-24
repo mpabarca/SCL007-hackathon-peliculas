@@ -22,9 +22,10 @@ M.AutoInit();
       let movies =response.data.Search;
       let moviesFound = '';
     $.each(movies, (index,movie) => {
+      console.log(movie);
+      let idMovie = movie.imdbID;
+      console.log(idMovie);
         moviesFound += `
-
-
         <div class="col s12 m7">
           <h2 class="header">${movie.Title}</h2>
           <div class="card horizontal">
@@ -34,15 +35,16 @@ M.AutoInit();
             <div class="card-stacked">
               <div class="card-content">
                 <p>I am a very simple card. I am good at containing small bits of information.</p>
-                <span onclick="getRatingByName('${movie.Title}') id="rank"> </span>
+                <span id="`+idMovie+`"> </span>
               </div>
               <div class="card-action">
-                <a class="waves-effect waves-light btn modal-trigger" onclick="getMovieById('${movie.imdbID}')" href="#modal1">Detalles</a>
+                <a class="waves-effect waves-light btn modal-trigger" onclick="getMovieById('`+idMovie+` ')" href="#modal1">Detalles</a>
               </div>
             </div>
           </div>
         </div>
         `
+        getRating(idMovie);
         });
         $('#show-movies').html(moviesFound);
     })
@@ -85,12 +87,12 @@ M.AutoInit();
   }
   
   /* Función que filtra toda la data respecto a una película en especial y muestra el Rating */
-  function getRatingByName(movieName){
-    axios.get('http://www.omdbapi.com/?apikey=8f262e4a&t='+movieName+'&plot=full')
+  function getRating(id){
+    axios.get('http://www.omdbapi.com/?apikey=8f262e4a&i='+id+'&plot=full')
     .then((response) => {
-        console.log('nombre ' + movieName)
+        console.log('nombre ' + id)
         console.log(response.data.imdbRating)
-        $('#rank').html(response.data.imdbRating);
+        $('#'+id).html(response.data.imdbRating);
     })
     .catch((err) => {
         console.log(err);

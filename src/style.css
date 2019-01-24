@@ -2,6 +2,9 @@
     height: 250px;
     overflow: hidden;
 }
+#image{
+    height: 200px;
+}
 #card-horizontal{
     height: 250px;
 }

@@ -18,34 +18,7 @@ fetch("data/lol/lol.json")
          return resultadoFuncion2;
      } */
 
-window.functions ={
-    getMovies(searchText){
-        //obtención data
-        return axios.get('http://www.omdbapi.com/?apikey=8f262e4a&s='+searchText)
-        .then((response)=>{
-          let movies = response.data.Search;
-          console.log('movies array? '+ Object.values(movies));
-          let moviesFound = '';
-        //   return movies;
-        $.each(movies, (index,movie) => {
-            console.log('movie solo' + movie);
-            moviesFound += `
-            <div class="col-md-3">
-                <div class="well text-center">
-                    <img src="${movie.Poster}">
-                    <h5>${movie.Title}</h5>
-                    <a onclick="movieSelected('${movie.imdbID}')" class="btn btn-primary" href="#">Detalles</a>
-                </div>  
-            </div>
-            `
-            });
-            $('#show-movies').html(moviesFound);
-        })
-        .catch((err) => {
-          console.log(err);
-        }); 
-    }
-  
+window.functions ={  
   
     
 }

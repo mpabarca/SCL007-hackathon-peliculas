@@ -18,19 +18,18 @@ M.AutoInit();
       let idMovie = movie.imdbID;
       console.log(idMovie);
       showMovies.innerHTML += `
-        <div class="col s12 m7">
-          <h2 class="header">${movie.Title}</h2>
-          <div class="card horizontal">
+        <div class="col s12 m6 l4">
+          <div class="card horizontal" id="card-horizontal">
             <div class="card-image">
-              <img src="${movie.Poster}">
+              <img id="image" src="${movie.Poster}">
             </div>
             <div class="card-stacked">
-              <div class="card-content">
-                <p>I am a very simple card. I am good at containing small bits of information.</p>
+              <div class="card-content" id="card-sum">
+                <div id= "title-movie" class="header"><strong>${movie.Title}</strong></div>
                 <span id="`+idMovie+`"> </span>
               </div>
               <div class="card-action">
-                <a class="waves-effect waves-light btn modal-trigger" onclick="getMovieById('`+idMovie+` ')" href="#modal1">Detalles</a>
+                <a id="more-detail" class="btn-floating btn-large waves-effect waves-light red" onclick="getMovieById('`+idMovie+` ')" href="#modal1"><i class="material-icons">add</i></a>
               </div>
             </div>
           </div>

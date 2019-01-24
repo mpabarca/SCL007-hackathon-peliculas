@@ -148,6 +148,17 @@ M.AutoInit();
     console.log('llega acá?' + user);
   });
 
+  //Muestra página Inicio
+  document.getElementById('home').addEventListener('click',(event) => {
+    event.preventDefault();
+    document.getElementById('list-movies').style.display="block";
+    document.getElementById('carousel').style.display="block";
+    document.getElementById('jumbotrom').style.display="block";
+    document.getElementById('login').style.display="none";
+    document.getElementById('search-text').value = '';
+  });
+
+
   
   
 

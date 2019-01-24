@@ -17,19 +17,18 @@ M.AutoInit();
       console.log(movie);
       let idMovie = movie.imdbID;
       showMovies.innerHTML += `
-        <div class="col s12 m7">
-          <h2 class="header">${movie.Title}</h2>
-          <div class="card horizontal">
+        <div class="col s12 m6 l4">
+          <div class="card horizontal" id="card-horizontal">
             <div class="card-image">
-              <img src="${movie.Poster}">
+              <img id="image" src="${movie.Poster}">
             </div>
             <div class="card-stacked">
-              <div class="card-content">
-                <p>I am a very simple card. I am good at containing small bits of information.</p>
+              <div class="card-content" id="card-sum">
+                <div id= "title-movie" class="header"><strong>${movie.Title}</strong></div>
                 <span id="`+idMovie+`"> </span>
               </div>
               <div class="card-action">
-                <a class="waves-effect waves-light btn modal-trigger" onclick="getMovieById(`+idMovie+`)" href="#modal1">Detalles</a>
+                <a id="more-detail" class="btn-floating btn-large waves-effect waves-light red" onclick="getMovieById('`+idMovie+` ')" href="#modal1"><i class="material-icons">add</i></a>
               </div>
             </div>
           </div>
@@ -162,3 +161,52 @@ M.AutoInit();
 
   //BUSQUEDA POR GENERO
   
+
+  // Menu responsive
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.sidenav');
+    window.M.Sidenav.init(elems);
+
+  });
+  document.getElementById('home-responsive').addEventListener('click',(event) => {
+    event.preventDefault();
+    document.getElementById('list-movies').style.display="block";
+    document.getElementById('carousel').style.display="block";
+    document.getElementById('jumbotrom').style.display="block";
+    document.getElementById('login').style.display="none";
+    document.getElementById('search-text').value = '';
+  });
+  //LOGIN
+  document.getElementById('login-responsive').addEventListener('click',(event) => {
+    event.preventDefault();
+    let user = '';
+    let pass = '';
+    document.getElementById('show-movies').style.display="none";
+    document.getElementById('list-movies').style.display="none";
+    document.getElementById('carousel').style.display="none";
+    document.getElementById('jumbotrom').style.display="none";
+    let userIntro = document.getElementById('login');
+    userIntro.innerHTML = '';
+    userIntro.innerHTML = `
+      <form class="col s12 center-align">
+        <div class="row">
+          <div class="input-field col s12">
+            <i class="material-icons prefix">account_circle</i>
+            <input id ="userIdentify" type="text" class="validate">
+            <label for="user">Usuario</label>
+          </div>
+          <div class="input-field col s12">
+            <i class="material-icons prefix">lock</i>
+            <input id="password" type="password" class="validate">
+            <label for="password">Constraseña</label>
+          </div>
+          <a onclick="login("`+ user +`" ," `+ pass +`")" class="waves-effect waves-light btn">Iniciar sesión</a>
+          <h6>¿Aún no tienes una cuenta?</h6>
+          <a class = "modal-trigger" onclick="register()" href="#modal1">Registate acá</a>
+        </div>
+      </form>
+    `;
+    user =  document.getElementById('userIdentify').value;
+    pass = document.getElementById('password').innerHTML;
+    console.log('llega acá?' + user);
+  });

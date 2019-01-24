@@ -106,10 +106,12 @@ M.AutoInit();
   });
 
   //LOGIN
-  document.getElementById('login-access').addEventListener('click',(event)=>{
+  document.getElementById('login-access').addEventListener('click',(event) => {
     event.preventDefault();
+    console.log('llega aqui');
     document.getElementById('show-movies').innerHTML = '';
-    let account = document.getElementById('login-access').innerHTML;
+    document.getElementsByClassName('carousel').display
+    let account = document.getElementById('login').innerHTML;
     account.innerHTML = `
     
     <div class="row">

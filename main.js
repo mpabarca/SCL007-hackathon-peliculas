@@ -86,6 +86,10 @@ M.AutoInit();
         console.log(err);
     }); 
   }
+
+  function login(user,pass){
+
+  }
   
   //BUSQUEDA POR NOMBRE  
   
@@ -98,31 +102,33 @@ M.AutoInit();
   //LOGIN
   document.getElementById('login-access').addEventListener('click',(event) => {
     event.preventDefault();
-    console.log('llega aqui');
-    document.getElementById('show-movies').innerHTML = '';
-    document.getElementsByClassName('carousel').display
-    let account = document.getElementById('login').innerHTML;
-    account.innerHTML = `
-    
-    <div class="row">
-      <form class="col s12">
+    document.getElementById('show-movies').style.display="none";
+    document.getElementById('list-movies').style.display="none";
+    document.getElementById('carousel').style.display="none";
+    document.getElementById('jumbotrom').style.display="none";
+    let userIntro = document.getElementById('login');
+    userIntro.innerHTML = '';
+    userIntro.innerHTML = `
+      <form class="col s12 center-align">
         <div class="row">
-          <div class="input-field col s6">
+          <div class="input-field col s12">
             <i class="material-icons prefix">account_circle</i>
             <input id="icon_prefix" type="text" class="validate">
-            <label for="icon_prefix">First Name</label>
+            <label for="icon_prefix">Usuario</label>
           </div>
-          <div class="input-field col s6">
-            <i class="material-icons prefix">phone</i>
-            <input id="icon_telephone" type="tel" class="validate">
-            <label for="icon_telephone">Telephone</label>
+          <div class="input-field col s12">
+            <i class="material-icons prefix">lock</i>
+            <input id="password" type="password" class="validate">
+          <label for="password">Constraseña</label>
           </div>
+          <a class="waves-effect waves-light btn">Iniciar sesión</a>
         </div>
+
       </form>
-    </div>
-          
     
-    `
+            
+    
+    `;
   });
 
   //BUSQUEDA POR GENERO

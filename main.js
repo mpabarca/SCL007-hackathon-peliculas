@@ -18,25 +18,35 @@ let moviesFound = document.getElementById('show-movies');
 document.getElementById('search-form').addEventListener('submit',(event) => {
   event.preventDefault();
   let searchText = document.getElementById('search-text').value;
-  let movies = window.functions.getMovies(searchText);
-  let showMovies = '';
-  moviesFound = '';
-  console.log('en DOM' + movies);
-  // movies.forEach(element => {
-  //   console.log('movie solo' + movie);
-  //   moviesFound.innerHTML += `
-  //   <div class="col-md-3">
-  //       <div class="well text-center>
-  //           <img src="${element.Poster}">
-  //           <h5>${element.Title}</h5>
-  //           <a onclick="movieSelected('${element.imdbID}')" class="btn btn-primary" href="#">Detalles</a>
-  //       </div>  
-  //   </div>
-  //   `
-  // });
-
-    
-  });
+   
+  function getMovies(searchText){
+    //obtención data
+    axios.get('http://www.omdbapi.com/?apikey=8f262e4a&s='+searchText)
+    .then((response)=>{
+      let movies =response.data.Search;
+      let moviesFound = '';
+    //   return movies;
+    $.each(movies, (index,movie) => {
+        console.log('movie solo' + movie);
+        moviesFound += `
+        <div class="col-md-3">
+            <div class="well text-center">
+                <img src="${movie.Poster}">
+                <h5>${movie.Title}</h5>
+                <a onclick="movieSelected('${movie.imdbID}')" class="btn btn-primary" href="#">Detalles</a>
+            </div>  
+        </div>
+        `
+        });
+        $('#show-movies').html(moviesFound);
+    })
+    .catch((err) => {
+      console.log(err);
+    }); 
+  }
+    getMovies(searchText);
+    moviesFound = '';    
+});
 
 
 };

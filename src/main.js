@@ -10,12 +10,13 @@ M.AutoInit();
     axios.get('http://www.omdbapi.com/?apikey=8f262e4a&s='+searchText)
     .then((response)=>{
       let movies =response.data.Search;
-      
+      let showMovies = document.getElementById('show-movies');
+      showMovies.innerHTML = '';
     $.each(movies, (index,movie) => {
       console.log(movie);
       let idMovie = movie.imdbID;
       console.log(idMovie);
-      document.getElementById('show-movies').innerHTML += `
+      showMovies.innerHTML += `
         <div class="col s12 m7">
           <h2 class="header">${movie.Title}</h2>
           <div class="card horizontal">
@@ -128,22 +129,22 @@ M.AutoInit();
         <div class="row">
           <div class="input-field col s12">
             <i class="material-icons prefix">account_circle</i>
-            <input type="text" class="validate">
-            <label id="userIdentify" for="icon_prefix">Usuario</label>
+            <input id ="userIdentify" type="text" class="validate">
+            <label for="user">Usuario</label>
           </div>
           <div class="input-field col s12">
             <i class="material-icons prefix">lock</i>
             <input id="password" type="password" class="validate">
-            <label id="enterPass" for="password">Constraseña</label>
+            <label for="password">Constraseña</label>
           </div>
-          <a onclick="login(`+ user +` , `+ pass +`)" class="waves-effect waves-light btn">Iniciar sesión</a>
+          <a onclick="login("`+ user +`" ," `+ pass +`")" class="waves-effect waves-light btn">Iniciar sesión</a>
           <h6>¿Aún no tienes una cuenta?</h6>
           <a class = "modal-trigger" onclick="register()" href="#modal1">Registate acá</a>
         </div>
       </form>
     `;
-    user =  document.getElementById('userIdentify').innerHTML;
-    pass = document.getElementById('enterPass').innerHTML;
+    user =  document.getElementById('userIdentify').value;
+    pass = document.getElementById('password').innerHTML;
     console.log('llega acá?' + user);
   });
 

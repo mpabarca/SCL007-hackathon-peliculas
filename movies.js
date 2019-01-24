@@ -10,15 +10,13 @@ fetch("data/lol/lol.json")
 
 /*ESTRUCTURA BASE DE LA FUNCION
  nombreFuncion: (parametros) => {
-
          return resultadoFuncion;
      },
      nombreFuncion2: (parametros) => {
-
          return resultadoFuncion2;
      } */
 
-window.functions ={
+     window.functions ={
  
-}
-
+    }
+    

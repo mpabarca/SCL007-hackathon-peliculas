@@ -11,31 +11,11 @@ fetch("llamada-data")
 
 
 // INICIO DE TODO EL DOM
-window.onload =() =>{
-
-let moviesFound = document.getElementById('show-movies');
+// window.onload =() =>{
 
 document.getElementById('search-form').addEventListener('submit',(event) => {
-  event.preventDefault();
   let searchText = document.getElementById('search-text').value;
   let movies = window.functions.getMovies(searchText);
-  let showMovies = '';
-  moviesFound = '';
-  // movies.forEach(element => {
-  //   console.log('movie solo' + movie);
-  //   moviesFound.innerHTML += `
-  //   <div class="col-md-3">
-  //       <div class="well text-center>
-  //           <img src="${element.Poster}">
-  //           <h5>${element.Title}</h5>
-  //           <a onclick="movieSelected('${element.imdbID}')" class="btn btn-primary" href="#">Detalles</a>
-  //       </div>  
-  //   </div>
-  //   `
-  // });
-
-    
+  event.preventDefault();
   });
-
-
-};
+// };

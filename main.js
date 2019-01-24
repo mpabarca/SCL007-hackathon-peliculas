@@ -1,17 +1,6 @@
 //MANEJO DE DOM
 
-/*  FETCH
-let datajson;
-fetch("llamada-data")
- .then(data=>data.json())
- .then(data=>{
-   datajson=Object.values(data.data);
-})
-*/
 M.AutoInit();
-
-// INICIO DE TODO EL DOM
-// window.onload =() =>{
 
   //FUNCIONES
   
@@ -109,4 +98,3 @@ M.AutoInit();
   });
   //BUSQUEDA POR GENERO
   
-  // };

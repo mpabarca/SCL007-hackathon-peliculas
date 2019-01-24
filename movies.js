@@ -101,9 +101,6 @@ window.functions ={
             console.log(err);
         }); 
     }
-
-  
-  
-    
+ 
 }
 

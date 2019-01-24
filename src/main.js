@@ -88,6 +88,7 @@ function getRatingByName(movieName){
   }); 
 }
 
+
 //BUSQUEDA POR NOMBRE
 let moviesFound = document.getElementById('show-movies');
 

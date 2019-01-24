@@ -11,6 +11,7 @@ M.AutoInit();
     .then((response)=>{
       let movies =response.data.Search;
       let showMovies = document.getElementById('show-movies');
+      document.getElementById("show-movies").style.display="block";
       showMovies.innerHTML = '';
     $.each(movies, (index,movie) => {
       console.log(movie);

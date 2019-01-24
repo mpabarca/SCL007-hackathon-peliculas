@@ -6,19 +6,17 @@ fetch("data/lol/lol.json")
    
  })
 */
-//AQUI SE AGREGAN TODAS LAS FUNCIONES A USAR EN DOM
 
 /*ESTRUCTURA BASE DE LA FUNCION
- nombreFuncion: (parametros) => {
+ function nombreFuncion: (parametros) => {
 
          return resultadoFuncion;
-     },
-     nombreFuncion2: (parametros) => {
+     }
+*/
+window.onload =() =>{
 
-         return resultadoFuncion2;
-     } */
 
-window.functions ={
- 
+
 }
+
 

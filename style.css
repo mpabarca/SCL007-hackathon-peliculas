@@ -1,0 +1,13 @@
+.card-image{
+    height: 250px;
+    overflow: hidden;
+}
+#card-horizontal{
+    height: 250px;
+}
+h5{
+    font-size: 20px;
+}
+#more-detail{
+    float: right;
+}

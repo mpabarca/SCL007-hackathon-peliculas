@@ -27,3 +27,8 @@ h5 {
 .nav-wrapper {
   background-color: #E6B91E;
 }
+
+.yellow-btn {
+  background-color: #E6B91E;
+  color: black;
+}

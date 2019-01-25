@@ -49,7 +49,7 @@
               <h2 class="header">${movie.Title}</h2>
               <div class="card horizontal">
                 <div class="card-image">
-                  <img class="responsive-img" src="${movie.Poster}">
+                  <img class="image" src="${movie.Poster}">
                 </div>
                 <div class="card-stacked">
                   <div class="card-content">

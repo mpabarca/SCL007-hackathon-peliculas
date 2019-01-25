@@ -47,6 +47,10 @@
     .container{
         width: 70%;
     }
+    .modal{
+        width:890px;
+        height: 900px;
+    }
 }
 /* SMALL DEVICES (TABLETS/LARGE PHONES) */
 @media only screen and (min-width:768){

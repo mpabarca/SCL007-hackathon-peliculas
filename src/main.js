@@ -20,19 +20,34 @@ document.getElementById('search-form').addEventListener('submit',(event) => {
 //BUSQUEDA POR GENERO
 
 //BUSQUEDA POR RATING
-document.getElementById('range-rating').addEventListener('submit',(event) => {
-  event.preventDefault();
-  document.getElementById("carousel").style.display="none";
-  let searchText = document.getElementById('search-text').value;
-  let ratingUser = document.getElementById('rating').valueAsNumber;
-  compareRating(ratingUser);
+//document.getElementById('rating').addEventListener('change',(event) => {
+ // event.preventDefault();
+ // document.getElementById("carousel").style.display="none";
+ // let searchText = document.getElementById('search-text').value;
+ // let ratingUser = document.getElementById('rating').valueAsNumber;
+  //obtengo el valor de pelicula en tarjetas ya mostradas en lapagina
+  //if del arreglo de span
+  //si el valor coincide con la variable ratingUser get moviebyName
+  /*let spanValueRating = Array.from(document.getElementsByClassName('rating-value'));
+  spanValueRating.forEach((element) =>{
+    d ocument.getElementById('rating').addEventListener('change',(event) => {
+
+    });
+    
+  });
+  let spanString = document.getElementById(idMovie).innerHTML;
+  let spanStringArray = spanString.split(' ');
+  let ratingData= spanStringArray[1];
+  console.log(spanString);
+  console.log(ratingData);
+  compareRating(searchText,ratingUser);
   
 });
-
+*/
 //LOGIN
 document.getElementById('login-access').addEventListener('click',(event) => {
   event.preventDefault();
-  document.getElementById("filterBar").style.display="none";
+  document.getElementById("filter-bar").style.display="none";
   loginShow();
   
 });

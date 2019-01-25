@@ -40,10 +40,21 @@ document.getElementById('home-responsive').addEventListener('click',(event) => {
   yesDivs();
 });
 
+// Menu responsive
+document.addEventListener('DOMContentLoaded', function() {
+  var elems = document.querySelectorAll('.sidenav');
+  window.M.Sidenav.init(elems);
+});
+
 //Muestra pelis del ppio
 document.addEventListener('DOMContentLoaded', (event) => {
   event.preventDefault();  
   getMoviesByName('Her');
+
 });
+
+//BUSQUEDA POR GENERO
+
+
 
 

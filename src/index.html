@@ -1,154 +1,126 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <meta charset="utf-8" lang="en">
+        <title>What I See</title>              
+        <!--Import Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+        <!-- enlace materialize -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <!-- responsive mobile-first -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <!-- enlace hoja css -->
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <span class="go-up"><i class="material-icons">arrow_upward</i></span>
+        <header>
+            <!-- MENU NAVEGADOR-->
+            <div class="navbar-fixed">
+                <nav>
+                <div class="nav-wrapper">
+                    <a href="#" class="brand-logo center"><img class="responsive eye-logo" src="../src/img/ojo.png"></a>
+                    <a href="#" class="sidenav-trigger" data-target="mobile-nav">
+                        <i class="material-icons">menu</i>
+                    </a>
+                    <ul class="right hide-on-med-and-down">
+                        <li><a id="home" data-position="bottom" class = "tooltipped" data-tooltip="Home Page"><i class="material-icons right">home</i>Home</a></li>
+                        <li><a id="login-access" data-position="bottom" class = "tooltipped" data-tooltip="Access Account"><i class="material-icons right">perm_identity</i>Login</a></li>
+                    </ul>
+                </div>
+                </nav>
+            </div>
+            <ul class="sidenav" id="mobile-nav">
+                    <li><a id="home-responsive" data-position="bottom" class = "tooltipped" data-tooltip="Inicio"><i class="material-icons right">home</i>Home</a></li>
+                    <li><a id="login-responsive" data-position="bottom" class = "tooltipped" data-tooltip="Access Account"><i class="material-icons right">perm_identity</i>Login</a></li>
+                </ul>
+            
+        </header>
 
-<head>
-  <meta charset="utf-8" lang="en">
-  <title>Que Veo</title>
-  <!--Import Icon Font-->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
-    crossorigin="anonymous">
-  <!-- enlace materialize -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <!-- responsive mobile-first -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- enlace hoja css -->
-  <link rel="stylesheet" href="style.css">
-</head>
+        <main>
+            <!-- CONTENIDO BASE -->
+            <div class="container" id="filterBar">
+                <div class="input-field">
+                    <form id="search-form">
+                        <h4><i class="material-icons">search</i>  Search Movie</h4>
+                            <input type="text" class="form-control" id="search-text" placeholder="Search by Tittle of Movie">
+                            <a class="waves-effect waves-light btn yellow-btn"><i class="material-icons left">search</i>Search</a>
+                    </form>
+                </div>
+                <ul class="collapsible popout">
+                    <li>
+                        <div class="collapsible-header center-align"><i class="material-icons">movie_filter</i>Filter by Genre</div>
+                        <div class="collapsible-body">
+                            <div id = "filter" class = "menu section">
+                                <span class="span-filter tooltipped" data-tooltip="Action" id="Action"><img src="../src/img/action.jpg" ></img></span>
+                                <span class="span-filter tooltipped" data-tooltip="Comedy" id="Comedy"><img class="circle" src="../src/img/comedy.jpg" class ="circ-size"></img></span>
+                                <span class="span-filter tooltipped" data-tooltip="Crime" id="Crime"><img class="circle" src="../src/img/detective.jpg" class ="circle circ-size"></img></span>
+                                <span class="span-filter tooltipped" data-tooltip="Drama" id="Drama"><img class="circle" src="../src/img/drama.jpg" class ="circle circ-size"></img></span>
+                                <span class="span-filter tooltipped" data-tooltip="Fantasy" id="Fantasy"><img class="circle" src="../src/img/fantasy.jpg" class ="circle circ-size"></img></span>
+                                <span class="span-filter tooltipped" data-tooltip="Ciencia Ficción" id="Sci-Fi"><img class="circle" src="../src/img/fiction.jpg" class ="circle circ-size"></img></span>
+                                <span class="span-filter tooltipped" data-tooltip="History" id="History"><img class="circle" src="../src/img/history.jpg" class ="circle circ-size"></img></span>
+                                <span class="span-filter tooltipped" data-tooltip="Horror" id="Horror"><img class="circle" src="../src/img/horror.jpg" class ="circle circ-size"></img></span>                                
+                                <span class="span-filter tooltipped" data-tooltip="Mystery" id="Mystery"><img class="circle" src="../src/img/mistery.jpg" class ="circle circ-size"></img></span>
+                                <span class="span-filter tooltipped" data-tooltip="Musical" id="Musical"><img class="circle" src="../src/img/musical.jpg" class ="circle circ-size"></img></span>
+                                <span class="span-filter tooltipped" data-tooltip="Romance" id="Romance"><img class="circle" src="../src/img/romance.jpg" class ="circle circ-size"></img></span>
+                                <span class="span-filter tooltipped" data-tooltip="Thriller" id="Thriller"><img class="circle" src="../src/img/thriller.jpg" class ="circle circ-size"></img></span>
+                                <span class="span-filter tooltipped" data-tooltip="War" id="War"><img class="circle" src="../src/img/war.jpg" class ="circle circ-size"></img></span>
+                                <span class="span-filter tooltipped" data-tooltip="Western" id="Western"><img class="circle" src="../src/img/western.jpg" class ="circle circ-size"></img></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header"><i class="material-icons">star_border</i>Filter by Rating IMDB</div>
+                        <div class="collapsible-body">
+                            <form action="#" id="range-rating">
+                                <p class="range-field">
+                                    <input type="range" id="test5" min="0" max="10" step="1" id="rating"/>
+                                </p>
+                            </form>
+                        </div>
+                    </li>
+                    </ul>
+            </div>
+            
+            
+        <!--PAGINA 2-->
+        <!-- Carrusel-->
+            <div class="container" id="carousel">
+                <div class="carousel col s12 m12 l10">
+                    <a class="carousel-item" id='her' href="#one!"><img src="https://m.media-amazon.com/images/M/MV5BMjA1Nzk0OTM2OF5BMl5BanBnXkFtZTgwNjU2NjEwMDE@._V1_SX300.jpg"></a>
+                    <a class="carousel-item" href="#two!"><img src="https://m.media-amazon.com/images/M/MV5BMjMxNjY2MDU1OV5BMl5BanBnXkFtZTgwNzY1MTUwNTM@._V1_SX300.jpg"></a>
+                    <a class="carousel-item" href="#three!"><img src="https://m.media-amazon.com/images/M/MV5BNTc4MTc3NTQ5OF5BMl5BanBnXkFtZTcwOTg0NjI4NA@@._V1_SX300.jpg"></a>
+                    <a class="carousel-item" href="#four!"><img src="https://m.media-amazon.com/images/M/MV5BMTYyNzEyNDAzOV5BMl5BanBnXkFtZTgwNTk3NDczNjM@._V1_SX300.jpg"></a>
+                    <a class="carousel-item" href="#five!"><img src="https://m.media-amazon.com/images/M/MV5BMTY1OTA2MjI5OV5BMl5BanBnXkFtZTgwNzkxMjU4NjM@._V1_SX300.jpg"></a>
+                </div>
+                <br><br>
+                <div class="row" id="list-movies"></div> 
+            </div>
+            <div id="root" class="container">
+                <div id="modal1" class="modal"></div>
+                <div id="show-movies" class="row"></div>
+                <div id="login" class = "row"></div>
+            </div>
+        </main>   
+        <footer>
+            <!-- PIE DE PÁGINA -->
+        </footer> 
+        <div>
+            <!-- SCRIPT DE FRAMEWORKS-->
+            <!-- jQuery first, then Materialize JS -->
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+            <script src="https://code.jquery.com/jquery-latest.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+            <!-- Calling data -->
+            <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        </div>
 
-<body>
-  <header>
-    <!-- MENU NAVEGADOR-->
-    <div class="navbar-fixed">
-      <nav>
-        <div class="nav-wrapper">
-          <img src="/src/img/ojo.png" class="brand-logo small-logo center" alt="logo" onclick="window.scrollTo(0,0)">
-          <ul class="right hide-on-med-and-down">
-            <li><a id="home" data-position="bottom" class="tooltipped" data-tooltip="Inicio"><i class="material-icons right">home</i>Inicio</a></li>
-            <li><a id="login-access" data-position="bottom" class="tooltipped" data-tooltip="Acceso a cuenta For Movies"><i
-                  class="material-icons right">perm_identity</i>Login</a></li>
-          </ul>
-        </div>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <!-- CONTENIDO BASE -->
-    <div class="container">
-      <div class="jumbotrom" id="jumbotrom">
-        <h3 class="text-center">Buscar una Película</h3>
-        <form id="search-form">
-          <input type="text" class="form-control" id="search-text" placeholder="Buscar Película">
-        </form>
-      </div>
-    </div>
-
-
-    <!--PAGINA 2-->
-    <!-- Carrusel-->
-    <div class="container" id="carousel">
-      <div class="carousel col s12 m12 l10">
-        <a class="carousel-item" href="#one!"><img src="https://m.media-amazon.com/images/M/MV5BMjA1Nzk0OTM2OF5BMl5BanBnXkFtZTgwNjU2NjEwMDE@._V1_SX300.jpg"></a>
-        <a class="carousel-item" href="#two!"><img src="https://m.media-amazon.com/images/M/MV5BMjMxNjY2MDU1OV5BMl5BanBnXkFtZTgwNzY1MTUwNTM@._V1_SX300.jpg"></a>
-        <a class="carousel-item" href="#three!"><img src="https://m.media-amazon.com/images/M/MV5BNTc4MTc3NTQ5OF5BMl5BanBnXkFtZTcwOTg0NjI4NA@@._V1_SX300.jpg"></a>
-        <a class="carousel-item" href="#four!"><img src="https://m.media-amazon.com/images/M/MV5BMTYyNzEyNDAzOV5BMl5BanBnXkFtZTgwNTk3NDczNjM@._V1_SX300.jpg"></a>
-        <a class="carousel-item" href="#five!"><img src="https://m.media-amazon.com/images/M/MV5BMTY1OTA2MjI5OV5BMl5BanBnXkFtZTgwNzkxMjU4NjM@._V1_SX300.jpg"></a>
-      </div>
-      <br><br>
-      <div class="row" id="list-movies">
-        <div class="col s12 m6 l4" id="one!">
-          <div class="card horizontal" id="card-horizontal">
-            <div class="card-image">
-              <img id="image" src="https://m.media-amazon.com/images/M/MV5BMjA1Nzk0OTM2OF5BMl5BanBnXkFtZTgwNjU2NjEwMDE@._V1_SX300.jpg">
-            </div>
-            <div class="card-stacked">
-              <div class="card-content">
-                <h5 class="header">Her</h5>
-                <span id="tt1798709">8.0</span>
-              </div>
-              <div class="card-action">
-                <a id="more-detail" class="btn-floating btn-large waves-effect waves-light yellow-btn btn-small" onclick="getMovieById('tt1798709 ')"
-                  href="#modal1"><i class="material-icons">add</i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col s12 m6 l4" id="two!">
-          <div class="card horizontal" id="card-horizontal">
-            <div class="card-image">
-              <img id="image" src="https://m.media-amazon.com/images/M/MV5BMjMxNjY2MDU1OV5BMl5BanBnXkFtZTgwNzY1MTUwNTM@._V1_SX300.jpg">
-            </div>
-            <div class="card-stacked">
-              <div class="card-content">
-                <h5 class="header">Avengers: Infinity War</h5>
-                <span id="tt4154756">8.5</span>
-              </div>
-              <div class="card-action">
-                <a id="more-detail" class="btn-floating btn-large waves-effect waves-light yellow-btn btn-small" onclick="getMovieById('tt4154756 ')"
-                  href="#modal1"><i class="material-icons">add</i></a>
-                <div class="heart"><a id="like" class="btn-floating btn-large waves-effect waves-light yellow-btn btn-small"><i
-                      class="far fa-heart"></i></a></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col s12 m6 l4" id="three!">
-          <div class="card horizontal" id="card-horizontal">
-            <div class="card-image">
-              <img id="image" src="https://m.media-amazon.com/images/M/MV5BNTc4MTc3NTQ5OF5BMl5BanBnXkFtZTcwOTg0NjI4NA@@._V1_SX300.jpg">
-            </div>
-            <div class="card-stacked">
-              <div class="card-content">
-                <h5 class="header">Star Wars: Episode III - Revenge of the Sith</h5>
-                <span id="tt0121766">7.6</span>
-              </div>
-              <div class="card-action">
-                <a id="more-detail" class="btn-floating btn-large waves-effect waves-light yellow-btn btn-small" onclick="getMovieById('tt0121766 ')"
-                  href="#modal1"><i class="material-icons">add</i></a>
-                <div class="heart"><a id="like" class="btn-floating btn-large waves-effect waves-light yellow-btn btn-small"><i
-                      class="far fa-heart"></i></a></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col s12 m6 l4" id="four!">
-          <div class="card horizontal" id="card-horizontal">
-            <div class="card-image">
-              <img id="image" src="https://m.media-amazon.com/images/M/MV5BMTYyNzEyNDAzOV5BMl5BanBnXkFtZTgwNTk3NDczNjM@._V1_SX300.jpg">
-            </div>
-            <div class="card-stacked">
-              <div class="card-content">
-                <h5 class="header">Ralph Breaks the Internet</h5>
-                <span id="tt5848272">7.3</span>
-              </div>
-              <div class="card-action">
-                <a id="more-detail" class="btn-floating btn-large waves-effect waves-light yellow-btn btn-small" onclick="getMovieById('tt5848272 ')"
-                  href="#modal1"><i class="material-icons">add</i></a>
-                <div class="heart"><a id="like" class="btn-floating btn-large waves-effect waves-light yellow-btn btn-small"><i
-                      class="far fa-heart"></i></a></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col s12 m6 l4" id="five!">
-          <div class="card horizontal" id="card-horizontal">
-            <div class="card-image">
-              <img id="image" src="https://m.media-amazon.com/images/M/MV5BMTY1OTA2MjI5OV5BMl5BanBnXkFtZTgwNzkxMjU4NjM@._V1_SX300.jpg">
-            </div>
-            <div class="card-stacked">
-              <div class="card-content">
-                <h5 class="header">Glass</h5>
-                <span id="tt6823368">7.3</span>
-              </div>
-              <div class="card-action">
-                <a id="more-detail" class="btn-floating btn-large waves-effect waves-light yellow-btn btn-small" onclick="getMovieById('tt6823368 ')"
-                  href="#modal1"><i class="material-icons">add</i></a>
-                <div class="heart"><a id="like" class="btn-floating btn-large waves-effect waves-light yellow-btn btn-small"><i
-                      class="far fa-heart"></i></a></div>
-              </div>
-            </div>
-          </div>
+        <div>
+            <!-- SCRIPT DE ARCHIVOS-->
+            <script src="main.js"></script>
+            <script src="data.js"></script>
+            <script></script>
         </div>
       </div>
     </div>

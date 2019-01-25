@@ -131,11 +131,11 @@
     document.getElementById('modal1').innerHTML = ` 
     <div class="modal-content center-align">
         
-    <h4>¡Estamos trabajando para usted!<i class="material-icons">
+    <h4>We still work for you!<i class="material-icons">
     sentiment_satisfied_alt
     </i></h4>
     <div class="modal-footer">
-    <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cerrar</a>
+    <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
     </div>
     ` ;
   }
@@ -177,9 +177,9 @@
             <input id="password" type="password" class="validate">
             <label for="password">Constraseña</label>
           </div>
-          <a onclick="login("`+ user +`" ," `+ pass +`")" class="waves-effect waves-light btn">Iniciar sesión</a>
-          <h6>¿Aún no tienes una cuenta?</h6>
-          <a class = "modal-trigger" onclick="register()" href="#modal1">Registate acá</a>
+          <a onclick="login("`+ user +`" ," `+ pass +`")" class="waves-effect waves-light btn">Login</a>
+          <h6>Don't you have an user?</h6>
+          <a class = "modal-trigger" onclick="register()" href="#modal1">Register here</a>
         </div>
       </form>
     `;

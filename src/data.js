@@ -2,7 +2,7 @@
   
   /* Función que filtra toda la data respecto a un nombre y las muestra */
   function getMoviesByName(searchText){
-    document.getElementById("carousel").style.display="none";
+    console.log('Recibe peli Her');
     axios.get('http://www.omdbapi.com/?apikey=8f262e4a&s='+searchText)
     .then((response)=>{
       let movies =response.data.Search;
@@ -10,7 +10,6 @@
       document.getElementById("show-movies").style.display="block";
       showMovies.innerHTML = '';
     $.each(movies, (index,movie) => {
-      console.log(movie);
       let idMovie = movie.imdbID;
       showMovies.innerHTML += `
         <div class="col s12 m6 l4">
@@ -40,8 +39,6 @@
   
   /* Función que filtra toda la data respecto a una película en especial está lista para generar el modal */
   function getMovieById(id){
-    console.log(id);
-    console.log('http://www.omdbapi.com/?apikey=8f262e4a&i='+id+'&plot=full')
     axios.get('http://www.omdbapi.com/?apikey=8f262e4a&i='+id+'&plot=full')
     .then((response)=>{
       let movie = response.data;    
@@ -109,12 +106,14 @@
     ` ;
   }
 
+  //Oculta DIV's
   function noDivs(){
     document.getElementById('show-movies').style.display="none";
     document.getElementById('list-movies').style.display="none";
     document.getElementById('carousel').style.display="none";
     document.getElementById('jumbotrom').style.display="none";
   }
+  //Muestra DIV's
   function yesDivs(){
     document.getElementById('list-movies').style.display="block";
     document.getElementById('carousel').style.display="block";
@@ -123,6 +122,7 @@
     document.getElementById('search-text').value = '';
   }
 
+  //LOGIN, se muestra
   function loginShow(){
     let user = '';
     let pass = '';

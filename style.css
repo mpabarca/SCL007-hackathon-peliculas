@@ -1,136 +1,173 @@
-.span-filter img{
-    height: 40px;
-    border: 2px solid;
-    border-color: #333333;
-    cursor: pointer;
-    margin: 5px;
-}
-.truncatered{
-    width: 100px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+.span-filter img {
+  height: 40px;
+  border: 2px solid;
+  border-color: #333333;
+  cursor: pointer;
+  margin: 5px;
 }
 
-.eye-logo{
-    height: 50px;
-    margin: 7px;
+.truncatered {
+  width: 100px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-.go-up{
-    display: inline-block;
-    padding: 20px;
-    color: rgb((139, 125, 125)18, 216, 216);
-    cursor: pointer;
-    position: fixed;
-    bottom:20px;
-    right: 20px;
-    border-radius: 100%;
-  }
-  .nav-wrapper {
-    background-color: #E6B91E;
-  }
-  
-  .yellow-btn {
-    background-color: #E6B91E;
-  }
-  .modal { 
-    max-height: 80%;
-    max-width:90%; 
+
+.eye-logo {
+  height: 50px;
+  margin: 7px;
 }
+
+.go-up {
+  display: inline-block;
+  padding: 20px;
+  color: rgb((139, 125, 125)18, 216, 216);
+  cursor: pointer;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border-radius: 100%;
+}
+
+.nav-wrapper {
+  background-color: #E6B91E;
+}
+
+.yellow-btn {
+  background-color: #E6B91E;
+}
+
+.modal {
+  max-height: 80%;
+  max-width: 90%;
+}
+
 #modal-image {
-    max-height:50%;
-    max-width:20%;
+  max-height: 50%;
+  max-width: 20%;
 }
-#responsive-image{
-    max-height:50%;
-    max-width:20%;
+
+#responsive-image {
+  max-height: 50%;
+  max-width: 20%;
 }
+
+.truncatered {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.header {
+  font-size: 25px;
+  font-weight: bold;
+}
+
 
 /* LARGE DEVICES (LAPTOPS/DESKTOPS) */
-@media only screen and (min-width:992px){
-    .card-image{
-        height: 250px;
-        overflow: hidden;
-    }
-    #image{
-        height: 200px;
-    }
-    #card-horizontal{
-        height: 200px;
-    }
-    #title-movie{
-        font-size: 15px;
-        margin-top: 0%;
-    }
-    #card-sum{
-        padding-top: 0%;
-        padding-bottom: 0%;
-    }
-    #more-detail{
-        float: right;
-        position: relative;
-    }
-    .container{
-        width: 70%;
-    }
+@media only screen and (min-width:992px) {
+  .card-image {
+    height: 250px;
+    overflow: hidden;
+  }
+
+  #image {
+    height: 200px;
+  }
+
+  #card-horizontal {
+    height: 200px;
+  }
+
+  #title-movie {
+    font-size: 15px;
+    margin-top: 0%;
+  }
+
+  #card-sum {
+    padding-top: 0%;
+    padding-bottom: 0%;
+  }
+
+  #more-detail {
+    float: right;
+    position: relative;
+  }
+
+  .container {
+    width: 70%;
+  }
 }
+
 /* SMALL DEVICES (TABLETS/LARGE PHONES) */
-@media only screen and (min-width:768){
-    .card-image{
-        height: 230px;
-        overflow: hidden;
-    }
-    #image{
-        height: 230px;
-        width: 150px;
-    }
-    #card-horizontal{
-        height: 230px;
-    }
-    #title-movie{
-        font-size: 15px;
-        margin-top: 0%;
-    }
-    #card-sum{
-        padding-top: 0%;
-        padding-bottom: 0%;
-    }
-    #more-detail{
-        float: right;
-        position: relative;
-    }
-    .container{
-        width: 85%;
-    }
+@media only screen and (min-width:768) {
+  .card-image {
+    height: 230px;
+    overflow: hidden;
+  }
+
+  #image {
+    height: 230px;
+    width: 150px;
+  }
+
+  #card-horizontal {
+    height: 230px;
+  }
+
+  #title-movie {
+    font-size: 15px;
+    margin-top: 0%;
+  }
+
+  #card-sum {
+    padding-top: 0%;
+    padding-bottom: 0%;
+  }
+
+  #more-detail {
+    float: right;
+    position: relative;
+  }
+
+  .container {
+    width: 85%;
+  }
 }
+
 /* EXTRA SMALL DEVICES (PHONES) */
-@media only screen and (max-width:600px){
-    .card-image{
-        height: 200px;
-        overflow: hidden;
-    }
-    #image{
-        height: 200px;
-        width: 135px;
-    }
-    #card-horizontal{
-        height: 200px;
-        width: 90%;
-    }
-    #title-movie{
-        font-size: 15px;
-        margin-top: 0%;
-    }
-    #card-sum{
-        padding-top: 0%;
-        padding-bottom: 0%;
-    }
-    #more-detail{
-        float: right;
-        position: relative;
-    }
-    .container{
-        width: 90%;
-    }
-    
+@media only screen and (max-width:600px) {
+  .card-image {
+    height: 200px;
+    overflow: hidden;
+  }
+
+  #image {
+    height: 200px;
+    width: 135px;
+  }
+
+  #card-horizontal {
+    height: 200px;
+    width: 90%;
+  }
+
+  #title-movie {
+    font-size: 15px;
+    margin-top: 0%;
+  }
+
+  #card-sum {
+    padding-top: 0%;
+    padding-bottom: 0%;
+  }
+
+  #more-detail {
+    float: right;
+    position: relative;
+  }
+
+  .container {
+    width: 90%;
+  }
+
 }

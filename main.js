@@ -14,7 +14,7 @@ $(document).ready(function(){
 document.getElementById('search-form').addEventListener('submit',(event) => {
   event.preventDefault();
   let searchText = document.getElementById('search-text').value;
-    getMoviesByName(searchText); 
+  getMoviesByName(searchText); 
 });
 
 //LOGIN
@@ -39,9 +39,11 @@ document.getElementById('home-responsive').addEventListener('click',(event) => {
   yesDivs();
 });
 
-//BUSQUEDA POR GENERO
-
-
-
+//Muestra pelis del ppio
+document.getElementById('list-movies').addEventListener('DOMContentLoaded', (event) => {
+  event.preventDefault();
+  
+  getMoviesByName(searchText);
+});
 
 

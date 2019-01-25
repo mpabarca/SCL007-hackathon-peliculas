@@ -1,6 +1,13 @@
 //MANEJO DE DOM
 
 M.AutoInit();
+$(document).ready(function(){
+  $('.go-up').click(function(){
+        $('body, html').animate({
+              scrollTop: '0px'
+        });
+  });
+});
 
   //FUNCIONES
   
@@ -25,10 +32,10 @@ M.AutoInit();
             <div class="card-stacked">
               <div class="card-content" id="card-sum">
                 <div id= "title-movie" class="header"><strong>${movie.Title}</strong></div>
-                <span id="`+idMovie+`"> </span>
+                <span id="`+ idMovie +`"> </span>
               </div>
               <div class="card-action">
-                <a id="more-detail" class="btn-floating btn-large waves-effect waves-light red" onclick="getMovieById('`+idMovie+` ')" href="#modal1"><i class="material-icons">add</i></a>
+                <a id="more-detail" class="modal-trigger btn-floating btn-large waves-effect waves-light red" onclick="getMovieById('`+idMovie+`')" href="#modal1"><i class="material-icons">add</i></a>
               </div>
             </div>
           </div>
@@ -45,25 +52,37 @@ M.AutoInit();
   /* Función que filtra toda la data respecto a una película en especial está lista para generar el modal */
   function getMovieById(id){
     console.log(id);
+    console.log('http://www.omdbapi.com/?apikey=8f262e4a&i='+id+'&plot=full')
     axios.get('http://www.omdbapi.com/?apikey=8f262e4a&i='+id+'&plot=full')
     .then((response)=>{
       let movie = response.data;    
       console.log(movie);
       document.getElementById('modal1').innerHTML = ` 
           <div class="modal-content">
-          <h4>${movie.Title}</h4>
-          <ul class = "list-group">
-                  <li class = "list-group-item"><strong>Reseña:</strong>${movie.Genre} </li>
-                  <li class = "list-group-item"><strong>Género:</strong>${movie.Genre} </li>
-                  <li class = "list-group-item"><strong>Director:</strong>${movie.Genre} </li>
-                  <li class = "list-group-item"><strong>Valoración:</strong>${movie.Genre} </li>
-                  <li class = "list-group-item"><strong>Trailer:</strong>${movie.Genre} </li>
-                  <li class = "list-group-item"><strong>Premios:</strong>${movie.Genre} </li>
-                  <li class = "list-group-item"><strong>Imdb:</strong>${movie.Genre} </li>
-              </ul>
+            <div class="col s12 m7">
+              <h2 class="header">${movie.Title}</h2>
+              <div class="card horizontal">
+                <div class="card-image">
+                  <img class="responsive-img" src="${movie.Poster}">
+                </div>
+                <div class="card-stacked">
+                  <div class="card-content">
+                    <ul class = "list-group">
+                      <li class = "list-group-item">Genre: ${movie.Genre} </li>
+                      <li class = "list-group-item">Director:</strong>${movie.Director} </li>
+                      <li class = "list-group-item">Rating:</strong>${movie.imdbRating} </li>
+                      <li class = "list-group-item">Awards:</strong>${movie.Awards} </li>
+                      <li class = "list-group-item"><a href="${movie.Awards}">Imdb</a> </li>
+                      <li class = "list-group-item">Trailer:</strong>${movie.Genre} </li>
+                      <li class = "list-group-item">Plot:${movie.Plot}</li>
+                    </ul>      
+                  </div>
+              </div>
+            </div>
+          </div>
           </div>
           <div class="modal-footer">
-          <a class="modal-close waves-effect waves-green btn-flat">Agree</a>
+          <a class="modal-close waves-effect waves-green btn-flat">Close</a>
           </div>
       ` ;        
     })
@@ -76,9 +95,11 @@ M.AutoInit();
   function getRating(id){
     axios.get('http://www.omdbapi.com/?apikey=8f262e4a&i='+id+'&plot=full')
     .then((response) => {
+      let datitos= response.data;
+      console.log(datitos);
       let rating = response.data.imdbRating;
       document.getElementById(id).innerHTML = `Rating: `+rating;
-      $('#'+id).html(response.data.imdbRating);
+      // $('#'+id).html(response.data.imdbRating);
     })
     .catch((err) => {
         console.log(err);
@@ -100,7 +121,7 @@ M.AutoInit();
   }
 
   function login(user,pass){
-    console.log('Holi '+user);
+    console.log('Holi '+ user);
       // if (passw === 'profe'){
 
   }

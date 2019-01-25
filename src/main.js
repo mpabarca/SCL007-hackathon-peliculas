@@ -7,6 +7,7 @@ $(document).ready(function(){
               scrollTop: '0px'
         });
   });
+  $('.sidenav').sidenav();
 });
 
   //FUNCIONES

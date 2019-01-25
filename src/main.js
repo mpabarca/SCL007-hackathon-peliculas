@@ -17,11 +17,23 @@ document.getElementById('search-form').addEventListener('submit',(event) => {
   getMoviesByName(searchText); 
   document.getElementById("carousel").style.display="none";
 });
+//BUSQUEDA POR GENERO
+
+//BUSQUEDA POR RATING
+document.getElementById('range-rating').addEventListener('submit',(event) => {
+  event.preventDefault();
+  document.getElementById("carousel").style.display="none";
+  let ratingUser = document.getElementById('rating').value;
+  compareRating(ratingUser);
+  
+});
 
 //LOGIN
 document.getElementById('login-access').addEventListener('click',(event) => {
   event.preventDefault();
-  loginShow()
+  document.getElementById("filterBar").style.display="none";
+  loginShow();
+  
 });
 
 document.getElementById('login-responsive').addEventListener('click',(event) => {
@@ -34,6 +46,7 @@ document.getElementById('home').addEventListener('click',(event) => {
   event.preventDefault();
   yesDivs();
   getMoviesByName('Her');
+  document.getElementById("carousel").style.display="none";
 });
 
 document.getElementById('home-responsive').addEventListener('click',(event) => {
@@ -42,11 +55,6 @@ document.getElementById('home-responsive').addEventListener('click',(event) => {
   getMoviesByName('Her');
 });
 
-// Menu responsive
-document.addEventListener('DOMContentLoaded', function() {
-  var elems = document.querySelectorAll('.sidenav');
-  window.M.Sidenav.init(elems);
-});
 
 //Muestra pelis del ppio
 document.addEventListener('DOMContentLoaded', (event) => {
@@ -54,9 +62,3 @@ document.addEventListener('DOMContentLoaded', (event) => {
   getMoviesByName('Her');
 
 });
-
-//BUSQUEDA POR GENERO
-
-
-
-

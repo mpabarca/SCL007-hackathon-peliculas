@@ -1,6 +1,13 @@
 //MANEJO DE DOM
 
 M.AutoInit();
+$(document).ready(function(){
+  $('.go-up').click(function(){
+        $('body, html').animate({
+              scrollTop: '0px'
+        });
+  });
+});
 
   //FUNCIONES
   
@@ -16,7 +23,6 @@ M.AutoInit();
     $.each(movies, (index,movie) => {
       console.log(movie);
       let idMovie = movie.imdbID;
-      console.log(idMovie);
       showMovies.innerHTML += `
         <div class="col s12 m6 l4">
           <div class="card horizontal" id="card-horizontal">
@@ -26,10 +32,10 @@ M.AutoInit();
             <div class="card-stacked">
               <div class="card-content" id="card-sum">
                 <div id= "title-movie" class="header"><strong>${movie.Title}</strong></div>
-                <span id="`+idMovie+`"> </span>
+                <span id="`+ idMovie +`"> </span>
               </div>
               <div class="card-action">
-                <a id="more-detail" class="btn-floating btn-large waves-effect waves-light red" onclick="getMovieById('`+idMovie+` ')" href="#modal1"><i class="material-icons">add</i></a>
+                <a id="more-detail" class="modal-trigger btn-floating btn-large waves-effect waves-light red" onclick="getMovieById('`+idMovie+`')" href="#modal1"><i class="material-icons">add</i></a>
               </div>
             </div>
           </div>
@@ -44,29 +50,41 @@ M.AutoInit();
   } 
   
   /* Función que filtra toda la data respecto a una película en especial está lista para generar el modal */
-  function getMovieById(movieId){
-    axios.get('http://www.omdbapi.com/?apikey=8f262e4a&i='+movieId+'&plot=full')
+  function getMovieById(id){
+    console.log(id);
+    console.log('http://www.omdbapi.com/?apikey=8f262e4a&i='+id+'&plot=full')
+    axios.get('http://www.omdbapi.com/?apikey=8f262e4a&i='+id+'&plot=full')
     .then((response)=>{
-        console.log(response);
-        let movie = response.data;
-        document.getElementById('modal1').innerHTML = ` 
-            <div class="modal-content">
-                
-            <h4>${movie.Title}</h4>
-            <ul class = "list-group">
-                    <li class = "list-group-item"><strong>Género:</strong>${movie.Genre} </li>
-                    <li class = "list-group-item"><strong>Género:</strong>${movie.Genre} </li>
-                    <li class = "list-group-item"><strong>Género:</strong>${movie.Genre} </li>
-                    <li class = "list-group-item"><strong>Género:</strong>${movie.Genre} </li>
-                    <li class = "list-group-item"><strong>Género:</strong>${movie.Genre} </li>
-                    <li class = "list-group-item"><strong>Género:</strong>${movie.Genre} </li>
-                    <li class = "list-group-item"><strong>Género:</strong>${movie.Genre} </li>
-                </ul>
+      let movie = response.data;    
+      console.log(movie);
+      document.getElementById('modal1').innerHTML = ` 
+          <div class="modal-content">
+            <div class="col s12 m7">
+              <h2 class="header">${movie.Title}</h2>
+              <div class="card horizontal">
+                <div class="card-image">
+                  <img class="responsive-img" src="${movie.Poster}">
+                </div>
+                <div class="card-stacked">
+                  <div class="card-content">
+                    <ul class = "list-group">
+                      <li class = "list-group-item">Genre: ${movie.Genre} </li>
+                      <li class = "list-group-item">Director:</strong>${movie.Director} </li>
+                      <li class = "list-group-item">Rating:</strong>${movie.imdbRating} </li>
+                      <li class = "list-group-item">Awards:</strong>${movie.Awards} </li>
+                      <li class = "list-group-item"><a href="${movie.Awards}">Imdb</a> </li>
+                      <li class = "list-group-item">Trailer:</strong>${movie.Genre} </li>
+                      <li class = "list-group-item">Plot:${movie.Plot}</li>
+                    </ul>      
+                  </div>
+              </div>
             </div>
-            <div class="modal-footer">
-            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
-            </div>
-        ` ;        
+          </div>
+          </div>
+          <div class="modal-footer">
+          <a class="modal-close waves-effect waves-green btn-flat">Close</a>
+          </div>
+      ` ;        
     })
     .catch((err) => {
       console.log(err);
@@ -77,15 +95,18 @@ M.AutoInit();
   function getRating(id){
     axios.get('http://www.omdbapi.com/?apikey=8f262e4a&i='+id+'&plot=full')
     .then((response) => {
-      // let rating = response.data.imdbRating;
-      // document.getElementById(id).innerHTML = rating;
-      $('#'+id).html(response.data.imdbRating);
+      let datitos= response.data;
+      console.log(datitos);
+      let rating = response.data.imdbRating;
+      document.getElementById(id).innerHTML = `Rating: `+rating;
+      // $('#'+id).html(response.data.imdbRating);
     })
     .catch((err) => {
         console.log(err);
     }); 
   }
 
+  //Página de aviso no está habilitado el registro
   function register(){
     document.getElementById('modal1').innerHTML = ` 
     <div class="modal-content center-align">
@@ -100,7 +121,7 @@ M.AutoInit();
   }
 
   function login(user,pass){
-    console.log('Holi '+user);
+    console.log('Holi '+ user);
       // if (passw === 'profe'){
 
   }
@@ -122,6 +143,7 @@ M.AutoInit();
     document.getElementById('list-movies').style.display="none";
     document.getElementById('carousel').style.display="none";
     document.getElementById('jumbotrom').style.display="none";
+    document.getElementById('login').style.display="block";
     let userIntro = document.getElementById('login');
     userIntro.innerHTML = '';
     userIntro.innerHTML = `
@@ -129,8 +151,8 @@ M.AutoInit();
         <div class="row">
           <div class="input-field col s12">
             <i class="material-icons prefix">account_circle</i>
-            <input id ="userIdentify" type="text" class="validate">
             <label for="user">Usuario</label>
+            <input id ="userIdentify" type="text" class="validate">
           </div>
           <div class="input-field col s12">
             <i class="material-icons prefix">lock</i>
@@ -157,10 +179,6 @@ M.AutoInit();
     document.getElementById('login').style.display="none";
     document.getElementById('search-text').value = '';
   });
-
-
-  
-  
 
   //BUSQUEDA POR GENERO
   

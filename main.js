@@ -7,6 +7,7 @@ $(document).ready(function(){
               scrollTop: '0px'
         });
   });
+  $('.sidenav').sidenav();
 });
 
   //FUNCIONES
@@ -120,10 +121,23 @@ $(document).ready(function(){
     ` ;
   }
 
+  function noDivs(){
+    document.getElementById('show-movies').style.display="none";
+    document.getElementById('list-movies').style.display="none";
+    document.getElementById('carousel').style.display="none";
+    document.getElementById('jumbotrom').style.display="none";
+  }
+  function yesDivs(){
+    document.getElementById('list-movies').style.display="block";
+    document.getElementById('carousel').style.display="block";
+    document.getElementById('jumbotrom').style.display="block";
+    document.getElementById('login').style.display="none";
+    document.getElementById('search-text').value = '';
+  }
+
   function login(user,pass){
     console.log('Holi '+ user);
       // if (passw === 'profe'){
-
   }
 
   //BUSQUEDA POR NOMBRE  
@@ -139,10 +153,7 @@ $(document).ready(function(){
     event.preventDefault();
     let user = '';
     let pass = '';
-    document.getElementById('show-movies').style.display="none";
-    document.getElementById('list-movies').style.display="none";
-    document.getElementById('carousel').style.display="none";
-    document.getElementById('jumbotrom').style.display="none";
+    noDivs();
     document.getElementById('login').style.display="block";
     let userIntro = document.getElementById('login');
     userIntro.innerHTML = '';
@@ -173,11 +184,12 @@ $(document).ready(function(){
   //Muestra página Inicio
   document.getElementById('home').addEventListener('click',(event) => {
     event.preventDefault();
-    document.getElementById('list-movies').style.display="block";
-    document.getElementById('carousel').style.display="block";
-    document.getElementById('jumbotrom').style.display="block";
-    document.getElementById('login').style.display="none";
-    document.getElementById('search-text').value = '';
+    yesDivs()
+  });
+
+  document.getElementById('home-responsive').addEventListener('click',(event) => {
+    event.preventDefault();
+    yesDivs();
   });
 
   //BUSQUEDA POR GENERO
@@ -189,23 +201,13 @@ $(document).ready(function(){
     window.M.Sidenav.init(elems);
 
   });
-  document.getElementById('home-responsive').addEventListener('click',(event) => {
-    event.preventDefault();
-    document.getElementById('list-movies').style.display="block";
-    document.getElementById('carousel').style.display="block";
-    document.getElementById('jumbotrom').style.display="block";
-    document.getElementById('login').style.display="none";
-    document.getElementById('search-text').value = '';
-  });
+
   //LOGIN
   document.getElementById('login-responsive').addEventListener('click',(event) => {
     event.preventDefault();
     let user = '';
     let pass = '';
-    document.getElementById('show-movies').style.display="none";
-    document.getElementById('list-movies').style.display="none";
-    document.getElementById('carousel').style.display="none";
-    document.getElementById('jumbotrom').style.display="none";
+    noDivs();
     let userIntro = document.getElementById('login');
     userIntro.innerHTML = '';
     userIntro.innerHTML = `

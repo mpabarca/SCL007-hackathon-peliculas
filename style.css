@@ -1,3 +1,10 @@
+.truncatered{
+    width: 100px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 .eye-logo{
     height: 50px;
     margin: 7px;

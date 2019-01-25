@@ -1,12 +1,19 @@
 .go-up{
     display: inline-block;
     padding: 20px;
-    color: #333333;
+    color: rgb((139, 125, 125)18, 216, 216);
     cursor: pointer;
     position: fixed;
     bottom:20px;
     right: 20px;
     border-radius: 100%;
+  }
+  .nav-wrapper {
+    background-color: #E6B91E;
+  }
+  
+  .yellow-btn {
+    background-color: #E6B91E;
   }
 
 /* LARGE DEVICES (LAPTOPS/DESKTOPS) */

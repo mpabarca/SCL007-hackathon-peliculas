@@ -73,3 +73,42 @@ N° | Como | Quiero | Para
 ### Prototipo de Alta
 
 [Aqui puedes revisarlo](https://drive.google.com/open?id=1uKnndF_0QRyoObW4xFLS6U2IoLv8Snqe)
+
+### Planificación de desarrollo del proyecto
+
+[Aqui puedes revisar nuestra planificación](https://github.com/mpabarca/SCL007-hackathon-peliculas/projects)
+
+La distribución de tareas fue la siguiente:
+
+![Distribución de tareas](src/img/readme/20190125_090542.jpg)
+
+##### Maria Paz Abarca: 
+- Armado de ambiente de trabajo y carpetas
+- Buscar por nombre y visualización de resultados
+- Estudio y manejo de la data
+- Investigación de la API
+- TDD
+- Seleccionar por género
+- Barra de filtros
+- Ajustes en el CSS
+
+
+##### Daniela Asenjo:
+- Búsqueda por nombre y visualización de resultados
+- Estudio y manejo de la data
+- Investigación de la API
+- Modal 
+- Login
+- Seleccionar por género
+- Carrusel 
+- Ajustes en el CSS
+
+
+##### Maria José Salazar: 
+- Proceso de investigación, encuesta y entrevista, síntesis y benchmark
+- Historias de usuario y criterios de aceptación
+- Desarrollo de la presentación del día miércoles
+- Prototipo de baja calidad, testeo y síntesis
+- Prototipo de alta calidad 
+- Redme
+- Algunos ajustes en el CSS

@@ -93,17 +93,41 @@
   }
   /* Función que filtra toda la data respecto a un rating en especial y muestra todas las peliculas sobre ese rating */
   function compareRating(id,rating){
-    axios.get('http://www.omdbapi.com/?apikey=8f262e4a&i='+rating+'&plot=full')
+    axios.get('http://www.omdbapi.com/?apikey=8f262e4a&i='+id+'&plot=full')
     .then((response) => {
-      let datitos= response.data;
-      console.log(datitos);
-      let rating = response.data.imdbRating;
-      document.getElementById(rating).innerHTML = `Rating: `+rating;
-      // $('#'+id).html(response.data.imdbRating);
+      let ratingUser = rating;
+      let movies =response.data.Search;
+      let showMovies = document.getElementById('show-movies');
+      showMovies.innerHTML = '';
+      $.each(movies, (index,movie) => {
+        let idMovie = movie.imdbID;
+        let ratingData=getRating(idMovie);
+        if (ratingData>=ratingUser){
+          showMovies.innerHTML += `
+        <div class="col s12 m6 l4">
+          <div class="card horizontal" id="card-horizontal">
+            <div class="card-image">
+              <img id="image" src="${movie.Poster}">
+            </div>
+            <div class="card-stacked">
+              <div class="card-content" id="card-sum">
+                <div id= "title-movie" class="header"><strong>${movie.Title}</strong></div>
+                <span id="`+ idMovie +`"> </span>
+              </div>
+              <div class="card-action">
+                <a id="more-detail" class="modal-trigger btn-floating btn-large waves-effect waves-light yellow-btn" onclick="getMovieById('`+idMovie+`')" href="#modal1"><i class="material-icons">add</i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        `
+        }
+
+      })
     })
     .catch((err) => {
-        console.log(err);
-    }); 
+      console.log(err);
+  })
   }
 
   //Página de aviso no está habilitado el registro

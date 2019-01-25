@@ -23,7 +23,8 @@ document.getElementById('search-form').addEventListener('submit',(event) => {
 document.getElementById('range-rating').addEventListener('submit',(event) => {
   event.preventDefault();
   document.getElementById("carousel").style.display="none";
-  let ratingUser = document.getElementById('rating').value;
+  let searchText = document.getElementById('search-text').value;
+  let ratingUser = document.getElementById('rating').valueAsNumber;
   compareRating(ratingUser);
   
 });

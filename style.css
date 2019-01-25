@@ -8,6 +8,13 @@
     right: 20px;
     border-radius: 100%;
   }
+  .nav-wrapper {
+    background-color: #E6B91E;
+  }
+  
+  .yellow-btn {
+    background-color: #E6B91E;
+  }
 
 /* LARGE DEVICES (LAPTOPS/DESKTOPS) */
 @media only screen and (min-width:992px){

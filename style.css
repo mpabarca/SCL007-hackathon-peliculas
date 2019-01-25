@@ -11,6 +11,8 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .eye-logo {
@@ -50,11 +52,6 @@
 #responsive-image {
   max-height: 50%;
   max-width: 20%;
-}
-
-.truncatered {
-  font-size: 18px;
-  font-weight: bold;
 }
 
 .header {

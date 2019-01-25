@@ -53,11 +53,11 @@
                   <div class="card-content">
                     <ul class = "list-group">
                       <li class = "list-group-item">Genre: ${movie.Genre} </li>
-                      <li class = "list-group-item">Director:</strong>${movie.Director} </li>
-                      <li class = "list-group-item">Rating:</strong>${movie.imdbRating} </li>
-                      <li class = "list-group-item">Awards:</strong>${movie.Awards} </li>
+                      <li class = "list-group-item">Director: ${movie.Director} </li>
+                      <li class = "list-group-item">Rating: ${movie.imdbRating} </li>
+                      <li class = "list-group-item">Awards: ${movie.Awards} </li>
                       <li class = "list-group-item"><a href="${movie.Awards}">Imdb</a> </li>
-                      <li class = "list-group-item">Trailer:</strong>${movie.Genre} </li>
+                      <li class = "list-group-item">Trailer: ${movie.Genre} </li>
                       <li class = "list-group-item">Plot:${movie.Plot}</li>
                     </ul>      
                   </div>

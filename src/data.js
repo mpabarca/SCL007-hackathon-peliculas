@@ -18,7 +18,7 @@
             </div>
             <div class="card-stacked">
               <div class="card-content" id="card-sum">
-                <div id= "title-movie" class="header"><strong>${movie.Title}</strong></div>
+                <div id= "title-movie" class="header"><h6 class="truncatered">${movie.Title}</h6></div>
                 <span id="`+ idMovie +`"> </span>
               </div>
               <div class="card-action">
@@ -56,7 +56,6 @@
                       <li class = "list-group-item">Director: ${movie.Director} </li>
                       <li class = "list-group-item">Rating: ${movie.imdbRating} </li>
                       <li class = "list-group-item">Awards: ${movie.Awards} </li>
-                      <li class = "list-group-item"><a href="${movie.Awards}">Imdb</a> </li>
                       <li class = "list-group-item">Trailer: ${movie.Genre} </li>
                       <li class = "list-group-item">Plot:${movie.Plot}</li>
                     </ul>      

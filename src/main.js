@@ -15,6 +15,7 @@ document.getElementById('search-form').addEventListener('submit',(event) => {
   event.preventDefault();
   let searchText = document.getElementById('search-text').value;
   getMoviesByName(searchText); 
+  document.getElementById("carousel").style.display="none";
 });
 
 //LOGIN
@@ -40,10 +41,9 @@ document.getElementById('home-responsive').addEventListener('click',(event) => {
 });
 
 //Muestra pelis del ppio
-document.getElementById('list-movies').addEventListener('DOMContentLoaded', (event) => {
-  event.preventDefault();
-  
-  getMoviesByName(searchText);
+document.addEventListener('DOMContentLoaded', (event) => {
+  event.preventDefault();  
+  getMoviesByName('Her');
 });
 
 

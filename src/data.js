@@ -58,6 +58,7 @@
                       <li class = "list-group-item">Awards: ${movie.Awards} </li>
                       <li class = "list-group-item">Trailer: ${movie.Genre} </li>
                       <li class = "list-group-item">Plot:${movie.Plot}</li>
+                      <li class = "list-group-item right-align"><i class="material-icons like">favorite_border</i></li>
                     </ul>      
                   </div>
               </div>
@@ -188,7 +189,7 @@
 
   function login(user,pass){
     console.log('Holi '+ user);
-      // if (passw === 'profe'){
+      // if (passw === 'pelis'){
   }
 
   

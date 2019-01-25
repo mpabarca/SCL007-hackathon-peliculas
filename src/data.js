@@ -2,7 +2,6 @@
   
   /* Función que filtra toda la data respecto a un nombre y las muestra */
   function getMoviesByName(searchText){
-    console.log('Recibe peli Her');
     axios.get('http://www.omdbapi.com/?apikey=8f262e4a&s='+searchText)
     .then((response)=>{
       let movies =response.data.Search;
@@ -42,7 +41,6 @@
     axios.get('http://www.omdbapi.com/?apikey=8f262e4a&i='+id+'&plot=full')
     .then((response)=>{
       let movie = response.data;    
-      console.log(movie);
       document.getElementById('modal1').innerHTML = ` 
           <div class="modal-content">
             <div class="col s12 m7">
@@ -81,8 +79,6 @@
   function getRating(id){
     axios.get('http://www.omdbapi.com/?apikey=8f262e4a&i='+id+'&plot=full')
     .then((response) => {
-      let datitos= response.data;
-      console.log(datitos);
       let rating = response.data.imdbRating;
       document.getElementById(id).innerHTML = `Rating: `+rating;
       // $('#'+id).html(response.data.imdbRating);

@@ -60,5 +60,15 @@ document.getElementById('home-responsive').addEventListener('click',(event) => {
 document.addEventListener('DOMContentLoaded', (event) => {
   event.preventDefault();  
   getMoviesByName('Her');
+});
 
+//Filtra por género
+spanValueFilter = Array.from(document.getElementsByClassName('span-filter'))
+spanValueFilter.forEach(function(element){
+  element.addEventListener('click',(event) => {
+    event.preventDefault();
+    let valueSpan = element.id;
+    getMoviesByName(valueSpan);
+    
+  });
 });

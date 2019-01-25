@@ -14,6 +14,7 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
+        <span class="go-up"><i class="material-icons">arrow_upward</i></span>
         <header>
             <!-- MENU NAVEGADOR-->
             <div class="navbar-fixed">
@@ -24,8 +25,8 @@
                         <i class="material-icons">menu</i>
                     </a>
                     <ul class="right hide-on-med-and-down">
-                        <li><a id="home" data-position="bottom" class = "tooltipped" data-tooltip="Inicio"><i class="material-icons right">home</i>Inicio</a></li>
-                        <li><a id="login-access" data-position="bottom" class = "tooltipped" data-tooltip="Acceso a cuenta For Movies"><i class="material-icons right">perm_identity</i>Login</a></li>
+                        <li><a id="home" data-position="bottom" class = "tooltipped" data-tooltip="Inicio"><i class="material-icons right">home</i>Home</a></li>
+                        <li><a id="login-access" data-position="bottom" class = "tooltipped" data-tooltip="Access Account"><i class="material-icons right">perm_identity</i>Login</a></li>
                     </ul>
                 </div>
                 </nav>
@@ -43,9 +44,9 @@
             <!-- CONTENIDO BASE -->
             <div class="container">
                 <div class="jumbotrom" id="jumbotrom">
-                    <h3 class="text-center">Buscar una Película</h3>
+                    <h3 class="text-center">Search Movie</h3>
                     <form id="search-form">
-                        <input type="text" class="form-control" id="search-text" placeholder="Buscar Película">
+                        <input type="text" class="form-control" id="search-text" placeholder="Name or Category">
                     </form>
                 </div>
             </div>
@@ -66,7 +67,7 @@
                 <div class="col s12 m6 l4" id="one!">
                 <div class="card horizontal" id="card-horizontal">
                         <div class="card-image">
-                            <img id="image" src="https://m.media-amazon.com/images/M/MV5BMjA1Nzk0OTM2OF5BMl5BanBnXkFtZTgwNjU2NjEwMDE@._V1_SX300.jpg">
+                            <img id="image" class ="responsive-img" src="https://m.media-amazon.com/images/M/MV5BMjA1Nzk0OTM2OF5BMl5BanBnXkFtZTgwNjU2NjEwMDE@._V1_SX300.jpg">
                         </div>
                         <div class="card-stacked">
                             <div class="card-content" id="card-sum">
@@ -130,7 +131,7 @@
                 <div class="col s12 m6 l4" id="five!">
                     <div class="card horizontal" id="card-horizontal">
                         <div class="card-image">
-                          <img id="image" src="https://m.media-amazon.com/images/M/MV5BMTY1OTA2MjI5OV5BMl5BanBnXkFtZTgwNzkxMjU4NjM@._V1_SX300.jpg">
+                          <img id="image" class="responsive" src="https://m.media-amazon.com/images/M/MV5BMTY1OTA2MjI5OV5BMl5BanBnXkFtZTgwNzkxMjU4NjM@._V1_SX300.jpg">
                         </div>
                         <div class="card-stacked">
                         <div class="card-content" id="card-sum">
@@ -161,6 +162,7 @@
             <!-- SCRIPT DE FRAMEWORKS-->
             <!-- jQuery first, then Materialize JS -->
             <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+            <script src="https://code.jquery.com/jquery-latest.js"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
             <!-- Calling data -->
             <script src="https://unpkg.com/axios/dist/axios.min.js"></script>

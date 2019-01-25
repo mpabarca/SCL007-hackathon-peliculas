@@ -2,7 +2,6 @@
   
   /* Función que filtra toda la data respecto a un nombre y las muestra */
   function getMoviesByName(searchText){
-    console.log('Recibe peli Her');
     axios.get('http://www.omdbapi.com/?apikey=8f262e4a&s='+searchText)
     .then((response)=>{
       let movies =response.data.Search;
@@ -19,7 +18,7 @@
             </div>
             <div class="card-stacked">
               <div class="card-content" id="card-sum">
-                <div id= "title-movie" class="header"><strong>${movie.Title}</strong></div>
+                <div id= "title-movie" class="header"><h6 class="truncatered">${movie.Title}</h6></div>
                 <span id="`+ idMovie +`"> </span>
               </div>
               <div class="card-action">
@@ -42,7 +41,6 @@
     axios.get('http://www.omdbapi.com/?apikey=8f262e4a&i='+id+'&plot=full')
     .then((response)=>{
       let movie = response.data;    
-      console.log(movie);
       document.getElementById('modal1').innerHTML = ` 
           <div class="modal-content">
             <div class="col s12 m7">
@@ -55,11 +53,10 @@
                   <div class="card-content">
                     <ul class = "list-group">
                       <li class = "list-group-item">Genre: ${movie.Genre} </li>
-                      <li class = "list-group-item">Director:</strong>${movie.Director} </li>
-                      <li class = "list-group-item">Rating:</strong>${movie.imdbRating} </li>
-                      <li class = "list-group-item">Awards:</strong>${movie.Awards} </li>
-                      <li class = "list-group-item"><a href="${movie.Awards}">Imdb</a> </li>
-                      <li class = "list-group-item">Trailer:</strong>${movie.Genre} </li>
+                      <li class = "list-group-item">Director: ${movie.Director} </li>
+                      <li class = "list-group-item">Rating: ${movie.imdbRating} </li>
+                      <li class = "list-group-item">Awards: ${movie.Awards} </li>
+                      <li class = "list-group-item">Trailer: ${movie.Genre} </li>
                       <li class = "list-group-item">Plot:${movie.Plot}</li>
                     </ul>      
                   </div>
@@ -81,8 +78,6 @@
   function getRating(id){
     axios.get('http://www.omdbapi.com/?apikey=8f262e4a&i='+id+'&plot=full')
     .then((response) => {
-      let datitos= response.data;
-      console.log(datitos);
       let rating = response.data.imdbRating;
       document.getElementById(id).innerHTML = `Rating: `+rating;
       // $('#'+id).html(response.data.imdbRating);

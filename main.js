@@ -68,8 +68,8 @@ spanValueFilter = Array.from(document.getElementsByClassName('span-filter'))
 spanValueFilter.forEach(function(element){
   element.addEventListener('click',(event) => {
     event.preventDefault();
+    document.getElementById('carousel').style.display="none";
     let valueSpan = element.id;
     getMoviesByName(valueSpan);
-    
   });
 });

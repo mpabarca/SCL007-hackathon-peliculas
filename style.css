@@ -4,6 +4,14 @@
   border-color: #333333;
   cursor: pointer;
   margin: 5px;
+
+.like{
+    margin: 5px;
+    cursor: pointer;
+}
+
+.like:before {
+    color: #E6B91E;
 }
 
 .truncatered {

@@ -88,16 +88,16 @@
     }); 
   }
   /* Función que filtra toda la data respecto a un rating en especial y muestra todas las peliculas sobre ese rating */
-  function compareRating(id,rating){
-    axios.get('http://www.omdbapi.com/?apikey=8f262e4a&i='+id+'&plot=full')
+  function compareRating(nameMovie,rating){
+    axios.get('http://www.omdbapi.com/?apikey=8f262e4a&s='+nameMovie+'&plot=full')
     .then((response) => {
       let ratingUser = rating;
       let movies =response.data.Search;
       let showMovies = document.getElementById('show-movies');
       showMovies.innerHTML = '';
       $.each(movies, (index,movie) => {
-        let idMovie = movie.imdbID;
-        let ratingData=getRating(idMovie);
+        let idMovieData = movie.imdbID;
+        //console.log(ratingData);
         if (ratingData>=ratingUser){
           showMovies.innerHTML += `
         <div class="col s12 m6 l4">
@@ -108,7 +108,7 @@
             <div class="card-stacked">
               <div class="card-content" id="card-sum">
                 <div id= "title-movie" class="header"><strong>${movie.Title}</strong></div>
-                <span id="`+ idMovie +`"> </span>
+                <span id="`+ idMovieData +`"> </span>
               </div>
               <div class="card-action">
                 <a id="more-detail" class="modal-trigger btn-floating btn-large waves-effect waves-light yellow-btn" onclick="getMovieById('`+idMovie+`')" href="#modal1"><i class="material-icons">add</i></a>
@@ -145,13 +145,13 @@
     document.getElementById('show-movies').style.display="none";
     document.getElementById('list-movies').style.display="none";
     document.getElementById('carousel').style.display="none";
-    document.getElementById('jumbotrom').style.display="none";
+    document.getElementById('filter-bar').style.display="none";
   }
   //Muestra DIV's
   function yesDivs(){
     document.getElementById('list-movies').style.display="block";
     document.getElementById('carousel').style.display="block";
-    document.getElementById('jumbotrom').style.display="block";
+    document.getElementById('filter-bar').style.display="block";
     document.getElementById('login').style.display="none";
     document.getElementById('search-text').value = '';
   }

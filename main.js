@@ -35,7 +35,7 @@ $(document).ready(function(){
                 <span id="`+ idMovie +`"> </span>
               </div>
               <div class="card-action">
-                <a id="more-detail" class="modal-trigger btn-floating btn-large waves-effect waves-light red" onclick="getMovieById('`+idMovie+`')" href="#modal1"><i class="material-icons">add</i></a>
+                <a id="more-detail" class="modal-trigger btn-floating btn-large waves-effect waves-light yellow-btn" onclick="getMovieById('`+idMovie+`')" href="#modal1"><i class="material-icons">add</i></a>
               </div>
             </div>
           </div>

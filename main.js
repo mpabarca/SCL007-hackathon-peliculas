@@ -32,12 +32,14 @@ document.getElementById('login-responsive').addEventListener('click',(event) => 
 //Muestra página Inicio
 document.getElementById('home').addEventListener('click',(event) => {
   event.preventDefault();
-  yesDivs()
+  yesDivs();
+  getMoviesByName('Her');
 });
 
 document.getElementById('home-responsive').addEventListener('click',(event) => {
   event.preventDefault();
   yesDivs();
+  getMoviesByName('Her');
 });
 
 // Menu responsive

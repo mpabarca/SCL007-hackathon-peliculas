@@ -42,11 +42,6 @@ document.getElementById('home-responsive').addEventListener('click',(event) => {
 //BUSQUEDA POR GENERO
 
 
-// Menu responsive
-document.addEventListener('DOMContentLoaded', function() {
-  var elems = document.querySelectorAll('.sidenav');
-  window.M.Sidenav.init(elems);
 
-});
 
 

@@ -2,7 +2,7 @@
   
   /* Función que filtra toda la data respecto a un nombre y las muestra */
   function getMoviesByName(searchText){
-    document.getElementById("carousel").style.display="none";
+    console.log('Recibe peli Her');
     axios.get('http://www.omdbapi.com/?apikey=8f262e4a&s='+searchText)
     .then((response)=>{
       let movies =response.data.Search;

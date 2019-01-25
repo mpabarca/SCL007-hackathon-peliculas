@@ -2,8 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8" lang="en">
-        <title>What I See</title>      
-        <img class="responsive" src="../src/img/ojo.png">
+        <title>What I See</title>              
         <!--Import Icon Font-->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
@@ -21,7 +20,7 @@
             <div class="navbar-fixed">
                 <nav>
                 <div class="nav-wrapper">
-                    <a href="#" class="brand-logo">What I See</a>
+                    <a href="#" class="brand-logo ">What I See<img class="responsive eye-logo" src="../src/img/ojo.png"></a>
                     <a href="#" class="sidenav-trigger" data-target="mobile-nav">
                         <i class="material-icons">menu</i>
                     </a>
@@ -42,7 +41,7 @@
         <main>
             <!-- CONTENIDO BASE -->
             <div class="container">
-                <div class="jumbotrom" id="jumbotrom">
+                <div class="" id="jumbotrom">
                     <h3 class="text-center">Search Movie</h3>
                     <form id="search-form">
                         <input type="text" class="form-control" id="search-text" placeholder="Name or Category">
@@ -53,106 +52,22 @@
             
         <!--PAGINA 2-->
         <!-- Carrusel-->
-        <div class="container" id="carousel">
-            <div class="carousel col s12 m12 l10">
-                <a class="carousel-item" href="#one!"><img src="https://m.media-amazon.com/images/M/MV5BMjA1Nzk0OTM2OF5BMl5BanBnXkFtZTgwNjU2NjEwMDE@._V1_SX300.jpg"></a>
-                <a class="carousel-item" href="#two!"><img src="https://m.media-amazon.com/images/M/MV5BMjMxNjY2MDU1OV5BMl5BanBnXkFtZTgwNzY1MTUwNTM@._V1_SX300.jpg"></a>
-                <a class="carousel-item" href="#three!"><img src="https://m.media-amazon.com/images/M/MV5BNTc4MTc3NTQ5OF5BMl5BanBnXkFtZTcwOTg0NjI4NA@@._V1_SX300.jpg"></a>
-                <a class="carousel-item" href="#four!"><img src="https://m.media-amazon.com/images/M/MV5BMTYyNzEyNDAzOV5BMl5BanBnXkFtZTgwNTk3NDczNjM@._V1_SX300.jpg"></a>
-                <a class="carousel-item" href="#five!"><img src="https://m.media-amazon.com/images/M/MV5BMTY1OTA2MjI5OV5BMl5BanBnXkFtZTgwNzkxMjU4NjM@._V1_SX300.jpg"></a>
+            <div class="container" id="carousel">
+                <div class="carousel col s12 m12 l10">
+                    <a class="carousel-item" id='her' href="#one!"><img src="https://m.media-amazon.com/images/M/MV5BMjA1Nzk0OTM2OF5BMl5BanBnXkFtZTgwNjU2NjEwMDE@._V1_SX300.jpg"></a>
+                    <a class="carousel-item" href="#two!"><img src="https://m.media-amazon.com/images/M/MV5BMjMxNjY2MDU1OV5BMl5BanBnXkFtZTgwNzY1MTUwNTM@._V1_SX300.jpg"></a>
+                    <a class="carousel-item" href="#three!"><img src="https://m.media-amazon.com/images/M/MV5BNTc4MTc3NTQ5OF5BMl5BanBnXkFtZTcwOTg0NjI4NA@@._V1_SX300.jpg"></a>
+                    <a class="carousel-item" href="#four!"><img src="https://m.media-amazon.com/images/M/MV5BMTYyNzEyNDAzOV5BMl5BanBnXkFtZTgwNTk3NDczNjM@._V1_SX300.jpg"></a>
+                    <a class="carousel-item" href="#five!"><img src="https://m.media-amazon.com/images/M/MV5BMTY1OTA2MjI5OV5BMl5BanBnXkFtZTgwNzkxMjU4NjM@._V1_SX300.jpg"></a>
+                </div>
+                <br><br>
+                <div class="row" id="list-movies"></div> 
             </div>
-            <br><br>
-            <div class="row" id="list-movies">
-                <!-- <div class="col s12 m6 l4" id="one!">
-                <div class="card horizontal" id="card-horizontal">
-                        <div class="card-image">
-                            <img id="image" class ="responsive-img" src="https://m.media-amazon.com/images/M/MV5BMjA1Nzk0OTM2OF5BMl5BanBnXkFtZTgwNjU2NjEwMDE@._V1_SX300.jpg">
-                        </div>
-                        <div class="card-stacked">
-                            <div class="card-content" id="card-sum">
-                                <div id= "title-movie" class="header"><strong>Her</strong></div>
-                                <span id="tt1798709">8.0</span>
-                            </div>
-                            <div class="card-action">
-                                <a id="more-detail" class="btn-floating btn-large waves-effect waves-light yellow-btn"  onclick="getMovieById('tt1798709 ')" href="#modal1"><i class="material-icons">add</i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s12 m6 l4" id="two!">
-                    <div class="card horizontal" id="card-horizontal">
-                        <div class="card-image">
-                            <img id="image" src="https://m.media-amazon.com/images/M/MV5BMjMxNjY2MDU1OV5BMl5BanBnXkFtZTgwNzY1MTUwNTM@._V1_SX300.jpg">
-                        </div>
-                        <div class="card-stacked">
-                            <div class="card-content" id="card-sum">
-                                <div id= "title-movie" class="header"><strong>Avengers: Infinity War</strong></div>
-                                <span id="tt4154756">8.5</span>
-                            </div>
-                            <div class="card-action">
-                                <a id="more-detail" class="btn-floating btn-large waves-effect waves-light yellow-btn"  onclick="getMovieById('tt4154756 ')" href="#modal1"><i class="material-icons">add</i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s12 m6 l4" id="three!">
-                    <div class="card horizontal" id="card-horizontal">
-                        <div class="card-image">
-                          <img id="image" src="https://m.media-amazon.com/images/M/MV5BNTc4MTc3NTQ5OF5BMl5BanBnXkFtZTcwOTg0NjI4NA@@._V1_SX300.jpg">
-                        </div>
-                        <div class="card-stacked">
-                        <div class="card-content" id="card-sum">
-                            <div id= "title-movie" class="header"><strong>Star Wars: Episode III - Revenge of the Sith</strong></div>
-                            <span id="tt0121766">7.6</span>
-                        </div>
-                        <div class="card-action">
-                            <a id="more-detail" class="btn-floating btn-large waves-effect waves-light yellow-btn"  onclick="getMovieById('tt0121766 ')" href="#modal1"><i class="material-icons">add</i></a>
-                        </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s12 m6 l4" id="four!">
-                    <div class="card horizontal" id="card-horizontal">
-                        <div class="card-image">
-                          <img id="image" src="https://m.media-amazon.com/images/M/MV5BMTYyNzEyNDAzOV5BMl5BanBnXkFtZTgwNTk3NDczNjM@._V1_SX300.jpg">
-                        </div>
-                        <div class="card-stacked">
-                        <div class="card-content" id="card-sum">
-                            <div id= "title-movie" class="header"><strong>Ralph Breaks the Internet</strong></div>
-                            <span id="tt5848272">7.3</span>
-                        </div>
-                        <div class="card-action">
-                            <a id="more-detail" class="btn-floating btn-large waves-effect waves-light yellow-btn"  onclick="getMovieById('tt5848272 ')" href="#modal1"><i class="material-icons">add</i></a>
-                        </div>
-                        </div>
-                    </div> -->
-                </div>
-                <div class="col s12 m6 l4" id="five!">
-                    <div class="card horizontal" id="card-horizontal">
-                        <div class="card-image">
-                          <img id="image" class="responsive" src="https://m.media-amazon.com/images/M/MV5BMTY1OTA2MjI5OV5BMl5BanBnXkFtZTgwNzkxMjU4NjM@._V1_SX300.jpg">
-                        </div>
-                        <div class="card-stacked">
-                        <div class="card-content" id="card-sum">
-                            <div id= "title-movie" class="header"><strong>Glass</strong></div>
-                            <span id="tt6823368">7.3</span>
-                        </div>
-                        <div class="card-action">
-                            <a id="more-detail" class="btn-floating btn-large waves-effect waves-light yellow-btn"  onclick="getMovieById('tt6823368 ')" href="#modal1"><i class="material-icons">add</i></a>
-                        </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        
             <div id="root" class="container">
                 <div id="modal1" class="modal"></div>
                 <div id="show-movies" class="row"></div>
                 <div id="login" class = "row"></div>
             </div>
-            
         </main>   
         <footer>
             <!-- PIE DE PÁGINA -->

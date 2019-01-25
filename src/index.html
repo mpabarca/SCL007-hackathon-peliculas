@@ -39,14 +39,38 @@
         </header>
 
         <main>
-            <!-- CONTENIDO BASE -->
+            <!--Barra de filtros -->
             <div class="container">
-                <div class="jumbotrom" id="jumbotrom">
-                    <h3 class="text-center">Search Movie</h3>
-                    <form id="search-form">
-                        <input type="text" class="form-control" id="search-text" placeholder="Name or Category">
-                    </form>
-                </div>
+                <ul class="collapsible popout">
+                    <li>
+                        <div class="collapsible-header"><i class="material-icons">search</i>Search by Tittle of Movie</div>
+                        <div class="collapsible-body">
+                            <form id="search-form">
+                                <input type="text" class="form-control" id="search-text" placeholder="Write a Movie">
+                            </form>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header"><i class="material-icons">movie_filter</i>Search by Genre</div>
+                        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header"><i class="material-icons">star_border</i>Search by Rating</div>
+                        <div class="collapsible-body">
+                            <form action="#">
+                                <p class="range-field">
+                                    <input type="range" id="rating" min="0" max="10" step="1" />
+                                </p>
+                            </form>
+                        </div>
+                    </li>
+                </ul>
+                    <!--<div class="jumbotrom" id="jumbotrom">
+                        <h3 class="text-center">Search Movie</h3>
+                        <form id="search-form">
+                            <input type="text" class="form-control" id="search-text" placeholder="Name or Category">
+                        </form>
+                    </div>-->
             </div>
             
             

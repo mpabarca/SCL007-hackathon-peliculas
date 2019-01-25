@@ -40,18 +40,17 @@ document.getElementById('home-responsive').addEventListener('click',(event) => {
   yesDivs();
 });
 
-<<<<<<< HEAD
 // Menu responsive
 document.addEventListener('DOMContentLoaded', function() {
   var elems = document.querySelectorAll('.sidenav');
   window.M.Sidenav.init(elems);
+});
 
-=======
 //Muestra pelis del ppio
 document.addEventListener('DOMContentLoaded', (event) => {
   event.preventDefault();  
   getMoviesByName('Her');
->>>>>>> bf5974d8d525fd614f240ebd756e6060bd751ec6
+
 });
 
 //BUSQUEDA POR GENERO

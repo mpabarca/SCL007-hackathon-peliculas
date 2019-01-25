@@ -33,6 +33,18 @@
   .yellow-btn {
     background-color: #E6B91E;
   }
+  .modal { 
+    max-height: 80%;
+    max-width:90%; 
+}
+#modal-image {
+    max-height:50%;
+    max-width:20%;
+}
+#responsive-image{
+    max-height:50%;
+    max-width:20%;
+}
 
 /* LARGE DEVICES (LAPTOPS/DESKTOPS) */
 @media only screen and (min-width:992px){
@@ -60,10 +72,6 @@
     }
     .container{
         width: 70%;
-    }
-    .modal{
-        width:890px;
-        height: 900px;
     }
 }
 /* SMALL DEVICES (TABLETS/LARGE PHONES) */

@@ -46,8 +46,8 @@
             <div class="col s12 m7">
               <h2 class="header">${movie.Title}</h2>
               <div class="card horizontal">
-                <div class="card-image">
-                  <img class="image" src="${movie.Poster}">
+                <div class="card-image id="modal-image">
+                  <img class="responsive-image" src="${movie.Poster}">
                 </div>
                 <div class="card-stacked">
                   <div class="card-content">
